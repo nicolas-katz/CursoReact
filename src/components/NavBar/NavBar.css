@@ -1,35 +1,52 @@
 header {
-    padding: 14px 120px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;   
     background: white;
     box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Inter', sans-serif;
 }
 
-.Titulo {
-    margin-right: 20px;
+.Navegacion .BurgerMenu {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.Navegacion .BurgerMenu span {
+    position: absolute;
+    top: 15px;
+    height: 2px;
+    width: 20px;
+    background: black;
+    border-radius: 6px;
+}
+
+.Navegacion .BurgerMenu span::before {
+    top: -5px;
+    content: '';
+    height: 2px;
+    width: 20px;
+    background: black;
+    position: absolute;
+    border-radius: 6px;
+}
+
+.Navegacion .BurgerMenu span::after {
+    top: 5px;
+    content: '';
+    height: 2px;
+    width: 20px;
+    background: black;
+    position: absolute;
+    border-radius: 6px;
 }
 
 .Titulo label {
-    font-size: 16px;
+    font-size: 18px;
     color: black;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.Navegacion ul {
-    display: flex;
-}
-
-.Navegacion ul li {
-    list-style: none;
-    margin: 0 10px;
-    text-transform: uppercase;
-    color: black;
-    font-size: 14px;
-    letter-spacing: -1px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .Botones {
@@ -38,25 +55,66 @@ header {
 }
 
 .IniciarSesion, .Favoritos, .Carrito {
-    margin: 0 14px;
     font-size: 16px;
+    margin: 0 4px;
 }
 
 .CarritoContenedor {
-    display: flex;
-    align-items: center;
+    position: relative;
 }
 
 .CarritoContenedor label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    font-size: 14px;
     font-weight: 600;
-    border-radius: 50%;
-    text-align: center;
-    height: 20px;
-    width: 20px;
-    background: tomato;
-    color: white;
+}
+
+@media only screen and (min-width: 992px) {
+    
+    header {
+        padding: 20px 40px;
+    }
+
+    .Navegacion .BurgerMenu span, 
+    .Navegacion .BurgerMenu span::after,
+    .Navegacion .BurgerMenu span::before {
+        width: 23px;
+    }
+
+    .Navegacion .BurgerMenu {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Navegacion .BurgerMenu span {
+        top: 20px;
+    }
+
+    .Navegacion .BurgerMenu span::after {
+        top: 8px;
+    }
+
+    .Navegacion .BurgerMenu span::before {
+        top: -8px;
+    }
+
+    .Titulo label {
+        font-size: 30px;
+    }
+
+    .IniciarSesion, .Favoritos, .Carrito {
+        font-size: 20px;
+        margin: 0 16px;
+    }
+
+    .CarritoContenedor label {
+        position: absolute;
+        top: -8px;
+        right: 2px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
 }
