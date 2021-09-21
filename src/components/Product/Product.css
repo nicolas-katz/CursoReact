@@ -1,0 +1,30 @@
+.CardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin-top: 50px;
+}
+
+.Card {
+    border: 1px solid black;
+    width: 200px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.AgregarProductos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AgregarProductos button {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px;
+}
