@@ -1,30 +1,22 @@
-.CardsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-    margin-top: 50px;
+.CardProduct {
+    width: 23%;
+    height: 640px;
+    text-align: center;
+    margin: 12px;
+    position: relative;
 }
 
-.Card {
-    border: 1px solid black;
-    width: 200px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.CardProduct img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
 }
 
-.AgregarProductos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.AgregarProductos button {
-    width: 20px;
-    height: 20px;
-    margin: 0 10px;
+.ProductFav {
+    position: absolute;
+    top: 30px;
+    font-size: 24px;
+    color: white;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.3);
+    right: 30px;
 }

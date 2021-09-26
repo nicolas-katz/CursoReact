@@ -1,32 +1,17 @@
 import './Product.css';
-import React, { useState } from 'react';
+import React from 'react';
+import { FaHeart } from "react-icons/fa";
 
-const CardComponent = prop => {
-    const [productos, setProductos] = useState(0);
-    const sumarProductos = ()=>{
-      setProductos(productos + 1);
-      if (productos >= 10){
-        setProductos(10)
-      }
-    }
-    const restarProductos = ()=>{
-      setProductos(productos - 1);
-      if (productos <= 0){
-        setProductos(0)
-      }
-    }
+const Product = prop => {
     return(
-      <div className="Card">
-        <h3>{prop.title}</h3>
-        <p>{prop.text}</p>
+      <div className="CardProduct">
+        <img src={`./assets/products/${prop.image}`} />
+        <h3>{prop.name}</h3>
+        <p>{prop.price}</p>
         <button>Agregar al carrito</button>
-        <div className="AgregarProductos">
-          <button onClick={restarProductos}>-</button>
-          <p>{productos}</p>
-          <button onClick={sumarProductos}>+</button>
-        </div>
+        <FaHeart className="ProductFav" />
       </div>
     )
 }
 
-export default CardComponent;
+export default Product;

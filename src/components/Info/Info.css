@@ -1,0 +1,29 @@
+.InfoSection {
+    padding: 0 160px 80px 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.InfoContainer {
+    display: flex;
+    align-items: center;
+    width: 33%;
+}
+
+.InfoText {
+    margin-left: 20px;
+}
+
+.InfoIcon {
+    font-size: 30px;
+}
+
+.InfoText h4 {
+    font-size: 16px;
+}
+
+.InfoText p {
+    margin-top: -20px;
+    font-weight: lighter;
+}

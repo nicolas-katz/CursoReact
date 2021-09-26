@@ -1,0 +1,118 @@
+section {
+    padding: 60px;
+}
+
+.CategoriasContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 48.5% 48.5%;
+    grid-template-rows: 44% 12% 44%;
+    grid-template-areas: 
+    "celulares tablets"
+    "celulares laptops"
+    "accesorios laptops";
+    height: 800px;
+    gap: 3%;
+    row-gap: 0;
+}
+
+.CategoriasContainer h3 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: lighter;
+    color: white;
+    border-radius: 2px;
+}
+
+.accesorios,
+.celulares,
+.laptops,
+.tablets {
+    background: rgba(0, 0, 0, 0.322);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.CategoriasContainer .accesorios {
+    grid-area: accesorios;
+    background-image: url("../../assets/portada.jpg");
+}
+
+
+.CategoriasContainer .celulares {
+    grid-area: celulares;
+    background-image: url("../../assets/portada.jpg");
+}
+
+.CategoriasContainer .tablets {
+    grid-area: tablets;
+    background-image: url("../../assets/portada3.jpg");
+}
+
+.CategoriasContainer .laptops {
+    grid-area: laptops;
+    background-image: url("../../assets/portada2.jpg");
+}
+
+.Vendidos h2 {
+    margin: 70px 0;
+    font-size: 38px;
+    font-weight: lighter;
+    color: black;
+    text-align: center;
+}
+
+.ProductosVendidosContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ProductoVendido {
+    width: 32.5%;
+    height: 600px;
+    position: relative;
+}
+
+.ProductoVendido img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ProductoVendidoHover {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: calc(50% - 70px);
+    left: calc(50% - 70px);
+    text-align: center;
+    color: white;
+    transform: 1s;
+    font-weight: lighter;
+}
+
+.ProductoVendidoHover h4 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: lighter;
+}
+
+.ProductoVendidoHover p {
+    font-size: 16px;
+}
+
+.ProductoVendidoHover button {
+    border-radius: 2px;
+    margin-top: 40px;
+}
+
+.ProductoVendido:hover .ProductoVendidoHover {
+    opacity: 1;
+    visibility: visible;
+}

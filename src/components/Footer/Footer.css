@@ -1,0 +1,99 @@
+.FooterContainer {
+    background: black;
+    padding: 30px 60px 50px 60px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.FooterLogo {
+    width: 140px;
+    height: max-content;
+    margin-top: 30px;
+}
+
+.FooterLogo img {
+    width: 100%;
+}
+
+footer h5 {
+    margin-bottom: 14px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: grey;
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+footer p {
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+.FooterMediosDePagoIcons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.MDP {
+    margin-bottom: 8px;
+    margin-right: 8px;
+    font-size: 32px;
+}
+
+.RS {
+    font-size: 32px;
+    margin-right: 8px;
+}
+
+.Suscripcion input {
+    height: 42px;
+    width: 110px;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 0;
+    background: transparent;
+    padding: 0 8px;
+    color: white;
+}
+
+.SendEmail {
+    height: 44px;
+    border-radius: 0;
+    background: white;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.SuscripcionInput {
+    display: flex;
+    align-items: center;
+}
+
+.FooterInfo div {
+    display: flex;
+    align-items: center;
+}
+
+.InfoIcon {
+    font-size: 24px;
+}
+
+.FooterCopyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: gray;
+    text-transform: uppercase;
+    background: black;
+    padding: 0 60px 10px 60px;
+}
