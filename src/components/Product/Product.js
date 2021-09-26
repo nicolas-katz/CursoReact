@@ -2,6 +2,7 @@ import './Product.css';
 import React from 'react';
 import { FaHeart } from "react-icons/fa";
 import { MdOpenWith } from "react-icons/md";
+import CartButton from './CartButton';
 
 const Product = prop => {
 
@@ -18,7 +19,7 @@ const Product = prop => {
         <img src={`./assets/products/${prop.image}`} />
         <h3>{prop.name}</h3>
         <p>{prop.price}</p>
-        <button>Agregar al carrito</button>
+        <CartButton />
         <FaHeart className="ProductFav" />
         <MdOpenWith onClick={openModal} className="OpenModal" />
         <div onClick={closeModal} className="ModalContainer">

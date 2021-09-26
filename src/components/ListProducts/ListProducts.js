@@ -2,7 +2,7 @@ import './ListProducts.css';
 import React, { useEffect, useState } from 'react'
 import Product from '../Product/Product';
 import { RiSendPlaneLine } from 'react-icons/ri';
-// import { CircularProgress } from '@material-ui/core';
+import { CircularProgress } from '@material-ui/core';
 
 const ListProducts = ()=> {
     const [Productos, setProductos] = useState([]);
@@ -13,7 +13,7 @@ const ListProducts = ()=> {
                 {
                     id: 1,
                     name: "iPhone 11",
-                    img: "portada.jpg",
+                    img: "portada2.jpg",
                     price: "$180.000,00",
                     stock: "20",
                     description: ""
@@ -21,7 +21,7 @@ const ListProducts = ()=> {
                 {
                     id: 2,
                     name: "iPhone X",
-                    img: "portada.jpg",
+                    img: "portada3.jpg",
                     price: "$120.000,00",
                     stock: "15",
                     description: ""
@@ -160,8 +160,7 @@ const ListProducts = ()=> {
                         <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} />
                     )
                 })}
-                {/* <CircularProgress color="Dark" /> */}
-
+                {Productos.length !== 0 ? null : <CircularProgress color="Dark" className="CircularProgress" />}
             </div> 
             <div className="TodosLosProductos">
                 <button>Ver todos los productos <RiSendPlaneLine className="TodosLosProductosIcon" /></button>

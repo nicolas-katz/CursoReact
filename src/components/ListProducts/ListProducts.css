@@ -45,3 +45,7 @@
 .TodosLosProductosIcon {
     margin-left: 10px;
 }
+
+.CircularProgress {
+    margin: 40px auto 80px auto;
+}

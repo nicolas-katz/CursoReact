@@ -1,4 +1,5 @@
 import './NavBar.css';
+import React from 'react';
 import { AiOutlineUser, AiOutlineDown } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
