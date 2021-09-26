@@ -1,8 +1,18 @@
 import './Product.css';
 import React from 'react';
 import { FaHeart } from "react-icons/fa";
+import { MdOpenWith } from "react-icons/md";
 
 const Product = prop => {
+
+    const openModal = ()=> {
+      document.querySelector(".ModalContainer").classList.add("openModalContainer");
+    }
+
+    const closeModal = ()=> {
+      document.querySelector(".ModalContainer").classList.remove("openModalContainer");
+    }
+
     return(
       <div className="CardProduct">
         <img src={`./assets/products/${prop.image}`} />
@@ -10,6 +20,12 @@ const Product = prop => {
         <p>{prop.price}</p>
         <button>Agregar al carrito</button>
         <FaHeart className="ProductFav" />
+        <MdOpenWith onClick={openModal} className="OpenModal" />
+        <div onClick={closeModal} className="ModalContainer">
+          <div className="ModalProduct">
+            <img src={`./assets/products/${prop.image}`} />
+          </div>
+        </div>
       </div>
     )
 }

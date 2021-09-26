@@ -106,6 +106,38 @@ const ListProducts = ()=> {
                     stock: "7",
                     description: ""
                 },
+                {
+                    id: 13,
+                    name: "iMac 27",
+                    img: "portada.jpg",
+                    price: "$380.000,00",
+                    stock: "7",
+                    description: ""
+                },
+                {
+                    id: 14,
+                    name: "iMac 27",
+                    img: "portada.jpg",
+                    price: "$380.000,00",
+                    stock: "7",
+                    description: ""
+                },
+                {
+                    id: 15,
+                    name: "iMac 27",
+                    img: "portada.jpg",
+                    price: "$380.000,00",
+                    stock: "7",
+                    description: ""
+                },
+                {
+                    id: 16,
+                    name: "iMac 27",
+                    img: "portada.jpg",
+                    price: "$380.000,00",
+                    stock: "7",
+                    description: ""
+                },
             ]
             resolve(moskProducts)
         }, 3000)
@@ -125,7 +157,7 @@ const ListProducts = ()=> {
             <div className="CardsContainer">
                 {Productos.map((producto)=>{
                     return (
-                        <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} />
+                        <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} />
                     )
                 })}
                 {/* <CircularProgress color="Dark" /> */}

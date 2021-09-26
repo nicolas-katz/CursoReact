@@ -1,6 +1,6 @@
 .FooterContainer {
     background: black;
-    padding: 30px 60px 50px 60px;
+    padding: 30px 120px 50px 120px;
     display: flex;
     justify-content: space-between;
     color: white;
@@ -54,7 +54,7 @@ footer p {
 
 .Suscripcion input {
     height: 42px;
-    width: 110px;
+    width: 130px;
     outline: none;
     border: 1px solid white;
     border-radius: 0;
@@ -95,5 +95,5 @@ footer p {
     color: gray;
     text-transform: uppercase;
     background: black;
-    padding: 0 60px 10px 60px;
+    padding: 0 120px 10px 120px;
 }

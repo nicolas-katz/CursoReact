@@ -1,16 +1,16 @@
 .SectionProductos {
-    padding: 40px 60px;
+    padding: 40px 120px;
 }
 
 .SectionProductosTitulo {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin: 20px 0;
 }
 
 .SectionProductosTitulo h2 {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: lighter;
     letter-spacing: -2px;
     text-transform: uppercase;

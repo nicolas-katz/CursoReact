@@ -1,22 +1,87 @@
 .CardProduct {
     width: 23%;
-    height: 640px;
+    height: 560px;
     text-align: center;
-    margin: 12px;
     position: relative;
+    border-top: 1px solid rgba(155, 155, 155, 0.507);
+    padding-top: 18px;
 }
 
 .CardProduct img {
     width: 100%;
-    height: 440px;
+    height: 380px;
     object-fit: cover;
+}
+
+.CardProduct h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.CardProduct p {
+    font-size: 16px;
+    color: black;
+    letter-spacing: -1px;
+    margin-top: -16px;
+}
+
+.CardProduct button {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.507);
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    outline: none;
 }
 
 .ProductFav {
     position: absolute;
-    top: 30px;
-    font-size: 24px;
+    top: 40px;
+    font-size: 20px;
     color: white;
     box-shadow: 1px 2px 10px rgba(0,0,0,0.3);
-    right: 30px;
+    right: 20px;
+}
+
+.OpenModal {
+    position: absolute;
+    top: 40px;
+    font-size: 20px;
+    color: white;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.3);
+    left: 20px;
+}
+
+.ModalContainer {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.411);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s;
+}
+
+.ModalContainer.openModalContainer {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ModalProduct {
+    width: 600px;
+    height: 600px;
+    margin-top: 240px;
+}
+
+.ModalProduct img {
+    object-fit: cover;
 }

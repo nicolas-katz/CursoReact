@@ -14,7 +14,7 @@ function App() {
       <AiOutlineWhatsApp className="WAP" />
       <NavBar />
       <Main />
-      <Categorias />
+      {/* <Categorias /> */}
       <ListProducts />
       <Info />
       <Footer />
