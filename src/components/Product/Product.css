@@ -1,6 +1,6 @@
 .CardProduct {
     width: 23%;
-    height: 560px;
+    height: 520px;
     text-align: center;
     position: relative;
     border-top: 1px solid rgba(155, 155, 155, 0.507);
@@ -9,7 +9,7 @@
 
 .CardProduct img {
     width: 100%;
-    height: 380px;
+    height: 360px;
     object-fit: cover;
 }
 

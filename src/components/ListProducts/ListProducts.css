@@ -1,5 +1,5 @@
 .SectionProductos {
-    padding: 40px 120px;
+    padding: 40px 100px;
 }
 
 .SectionProductosTitulo {
@@ -47,5 +47,5 @@
 }
 
 .CircularProgress {
-    margin: 40px auto 80px auto;
+    margin: 80px auto 120px auto;
 }

@@ -12,11 +12,11 @@ header.abajo {
 }
 
 header.abajo .HeaderContainer {
-    margin: 2px 120px;
+    margin: 2px 100px;
 }
 
 .HeaderContainer {
-    margin: 20px 120px;
+    margin: 20px 100px;
     transition: 1s;
     display: flex;
     justify-content: space-between;
