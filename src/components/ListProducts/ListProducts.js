@@ -2,7 +2,7 @@ import './ListProducts.css';
 import React, { useEffect, useState } from 'react'
 import Product from '../Product/Product';
 import { RiSendPlaneLine } from 'react-icons/ri';
-import { CircularProgress } from '@material-ui/core';
+// import { CircularProgress } from '@material-ui/core';
 
 const ListProducts = ()=> {
     const [Productos, setProductos] = useState([]);
@@ -224,7 +224,7 @@ const ListProducts = ()=> {
                         <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} />
                     )
                 })}
-                {Productos.length !== 0 ? null : <CircularProgress color="Dark" className="CircularProgress" />}
+                {Productos.length !== 0 ? null : <div color="Dark" className="CircularProgress">Cargando productos...</div>}
             </div> 
             <div className="TodosLosProductos">
                 <button>Ver todos los productos <RiSendPlaneLine className="TodosLosProductosIcon" /></button>
