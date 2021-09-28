@@ -36,10 +36,14 @@ header.abajo .HeaderContainer {
 .Navegacion ul li {
     list-style: none;
     margin: 0 12px;
+}
+
+.Navegacion ul li a {
     font-size: 14px;
     color: white;
     cursor: pointer;
     font-weight: lighter;
+    text-decoration: none;
 }
 
 .Navegacion ul span {

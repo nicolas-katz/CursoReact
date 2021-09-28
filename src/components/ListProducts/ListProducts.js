@@ -1,8 +1,6 @@
 import './ListProducts.css';
 import React, { useEffect, useState } from 'react'
 import Product from '../Product/Product';
-import { RiSendPlaneLine } from 'react-icons/ri';
-// import { CircularProgress } from '@material-ui/core';
 
 const ListProducts = ()=> {
     const [Productos, setProductos] = useState([]);
@@ -13,7 +11,7 @@ const ListProducts = ()=> {
                 {
                     id: 1,
                     name: "iPhone 11",
-                    img: "portada2.jpg",
+                    img: "iphone11.png",
                     price: "$180.000,00",
                     stock: "20",
                     description: ""
@@ -21,39 +19,39 @@ const ListProducts = ()=> {
                 {
                     id: 2,
                     name: "iPhone X",
-                    img: "portada3.jpg",
+                    img: "iphonex.png",
                     price: "$120.000,00",
                     stock: "15",
                     description: ""
                 },
                 {
                     id: 3,
-                    name: "iPhone 12",
-                    img: "portada.jpg",
+                    name: "iPhone 13",
+                    img: "iphone13.png",
                     price: "$200.000,00",
                     stock: "10",
                     description: ""
                 },
                 {
                     id: 4,
-                    name: "iPad Pro",
-                    img: "portada.jpg",
+                    name: "iPad Mini",
+                    img: "ipadmini.png",
                     price: "$150.000,00",
                     stock: "8",
                     description: ""
                 },
                 {
                     id: 5,
-                    name: "MacBook Pro",
-                    img: "portada.jpg",
+                    name: "Apple Watch",
+                    img: "applewatch.png",
                     price: "$340.000,00",
                     stock: "5",
                     description: ""
                 },
                 {
                     id: 6,
-                    name: "iPad Mini",
-                    img: "portada.jpg",
+                    name: "iPad Pro",
+                    img: "ipadpro.png",
                     price: "$210.000,00",
                     stock: "2",
                     description: ""
@@ -61,143 +59,79 @@ const ListProducts = ()=> {
                 {
                     id: 7,
                     name: "AirPods Pro",
-                    img: "portada.jpg",
+                    img: "airpodspro.png",
                     price: "$50.000,00",
                     stock: "100",
                     description: ""
                 },
                 {
                     id: 8,
-                    name: "Apple Watch 7",
-                    img: "portada.jpg",
+                    name: "Samsung Galaxi 21",
+                    img: "samsung21.png",
                     price: "$110.000,00",
                     stock: "14",
                     description: ""
                 },
                 {
                     id: 9,
-                    name: "MacBook Air",
-                    img: "portada.jpg",
+                    name: "Samsung Galaxi Tab",
+                    img: "samsungtab.png",
                     price: "$400.000,00",
                     stock: "25",
                     description: ""
                 },
                 {
                     id: 10,
-                    name: "iPhone 13 Pro",
-                    img: "portada.jpg",
+                    name: "MacBook Pro",
+                    img: "macbookpro.png",
                     price: "$220.000,00",
                     stock: "18",
                     description: ""
                 },
                 {
                     id: 11,
-                    name: "iPhone SE",
-                    img: "portada.jpg",
+                    name: "Galaxi Watch4",
+                    img: "galaxiwatch4.webp",
                     price: "$130.000,00",
                     stock: "3",
                     description: ""
                 },
                 {
                     id: 12,
-                    name: "iMac 27",
-                    img: "portada.jpg",
+                    name: "Samsung Galaxi S20",
+                    img: "samsungs20.png",
                     price: "$380.000,00",
                     stock: "7",
                     description: ""
                 },
                 {
                     id: 13,
-                    name: "iMac 27",
-                    img: "portada.jpg",
+                    name: "iPhone 13 Pro",
+                    img: "iphone13pro.jpg",
                     price: "$380.000,00",
                     stock: "7",
                     description: ""
                 },
                 {
                     id: 14,
-                    name: "iMac 27",
-                    img: "portada.jpg",
+                    name: "Dell XPS 15",
+                    img: "dellxps15.jpg",
                     price: "$380.000,00",
                     stock: "7",
                     description: ""
                 },
                 {
                     id: 15,
-                    name: "iMac 27",
-                    img: "portada.jpg",
+                    name: "HP G6",
+                    img: "hpg6.jpg",
                     price: "$380.000,00",
                     stock: "7",
                     description: ""
                 },
                 {
                     id: 16,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 17,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 18,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 19,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 20,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 21,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 22,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 23,
-                    name: "iMac 27",
-                    img: "portada.jpg",
-                    price: "$380.000,00",
-                    stock: "7",
-                    description: ""
-                },
-                {
-                    id: 24,
-                    name: "iMac 27",
-                    img: "portada.jpg",
+                    name: "Motorola XT1955-2 G7",
+                    img: "motorolaxt1955-2.webp",
                     price: "$380.000,00",
                     stock: "7",
                     description: ""
@@ -227,7 +161,7 @@ const ListProducts = ()=> {
                 {Productos.length !== 0 ? null : <div color="Dark" className="CircularProgress">Cargando productos...</div>}
             </div> 
             <div className="TodosLosProductos">
-                <button>Ver todos los productos <RiSendPlaneLine className="TodosLosProductosIcon" /></button>
+                <button>Ver todos los productos</button>
             </div>
         </section>
     )

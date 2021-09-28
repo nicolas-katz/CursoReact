@@ -1,9 +1,8 @@
 .CardProduct {
     width: 23%;
-    height: 520px;
+    height: 500px;
     text-align: center;
     position: relative;
-    border-top: 1px solid rgba(155, 155, 155, 0.507);
     padding-top: 18px;
 }
 
@@ -11,12 +10,13 @@
     width: 100%;
     height: 360px;
     object-fit: cover;
+    border-radius: 4px;
 }
 
 .CardProduct h3 {
     font-size: 18px;
     font-weight: 500;
-    margin-top: 6px;
+    margin-top: 14px;
 }
 
 .CardProduct p {
@@ -26,31 +26,23 @@
     margin-top: -16px;
 }
 
+.CartButtonContainer {
+    display: grid;
+    grid-template-columns: 50% 30%;
+    gap: 5%;
+    place-items: center;
+    place-content: center;
+}
+
 .CardProduct button {
     background: transparent;
     border: 1px solid rgba(0, 0, 0, 0.507);
     width: 100%;
     height: 40px;
-    font-size: 16px;
+    font-size: 14px;
+    border-radius: 30px;
     text-transform: uppercase;
-    letter-spacing: -1px;
     outline: none;
-}
-
-.ProductFav {
-    position: absolute;
-    top: 40px;
-    font-size: 20px;
-    color: white;
-    right: 20px;
-}
-
-.OpenModal {
-    position: absolute;
-    top: 40px;
-    font-size: 20px;
-    color: white;
-    left: 20px;
 }
 
 .ModalContainer {

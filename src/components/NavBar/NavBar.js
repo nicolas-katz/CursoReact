@@ -5,6 +5,7 @@ import { BsBag } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 import { FiHeart } from "react-icons/fi";
 import Logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -42,10 +43,10 @@ const NavBar = () => {
                 </div>
                 <div className="Navegacion">
                     <ul>
-                        <li>Accesorios</li>
-                        <li>Celulares</li>
-                        <li>Tablets</li>
-                        <li>Laptops</li>
+                        <li><Link to="/accesorios">Accesorios</Link></li>
+                        <li><Link to="/celulares">Celulares</Link></li>
+                        <li><Link to="/tablets">Tablets</Link></li>
+                        <li><Link to="/laptops">Laptops</Link></li>
                         <span>|</span>
                         <div className="Botones">
                             <div onClick={abrirDropdown} className="UserContenedor">

@@ -8,8 +8,9 @@ const CartButton = () => {
     }
 
     return (
-        <div>
-            <button onClick={sumarAlCarrito}>Agregar al carrito</button>
+        <div className="CartButtonContainer">
+            <button onClick={sumarAlCarrito}>COMPRAR</button>
+            <button>VER</button>
         </div>
     )
 }
