@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ProductDetails from '../ProductDetails/ProductDetails';
 import './DetailsContainer.css';
 import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos';
-import { Link } from 'react-router-dom';
 import { useParams } from 'react-router';
 
 const DetailsContainer = ()=>{

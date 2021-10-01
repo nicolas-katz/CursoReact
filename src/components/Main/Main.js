@@ -8,7 +8,7 @@ const Main = ()=>{
 
         <main>
             <h1>La mejor tecnología, siempre en tus manos</h1>
-            <Link to="/categories/allproducts"><button>Shop now</button></Link>
+            <Link to="/allproducts"><button>Shop now</button></Link>
         </main>
 
     )

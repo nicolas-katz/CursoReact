@@ -33,7 +33,7 @@ const ListProducts = ()=> {
                 {Productos.length !== 0 ? null : <div color="Dark" className="CircularProgress">Cargando productos...</div>}
             </div> 
             <div className="TodosLosProductos">
-                <Link to="/productos"><button>Ver más &rarr;</button></Link>
+                <Link to="/allproducts"><button>Ver más &rarr;</button></Link>
             </div>
         </section>
     )

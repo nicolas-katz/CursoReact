@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Product from '../components/Product/Product';
 import ListadoDeProductos from '../components/ListadoDeProductos/ListadoDeProductos';
-import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 
-const CategoryPage = ()=>{
+const AllProductsPage = ()=>{
     const [Productos, setProductos] = useState([]);
-    const {catId} = useParams();
 
     const getProducts = new Promise( resolve=>{
         setTimeout(()=>{
@@ -19,15 +17,13 @@ const CategoryPage = ()=>{
         getProducts.then( data=>{
             setProductos(data)
         })
-    }, [catId])
-
-    const ProductCategorie = catId;
+    }, [])
 
     return(
         <div>
             {Productos.map((producto)=>{
                 return (
-                    ProductCategorie === producto.categorie ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} />  : null
+                    <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} />
                 )
             })}
             {Productos.length !== 0 ? null : <div color="Dark" className="CircularProgress">Cargando productos...</div>}
@@ -35,4 +31,4 @@ const CategoryPage = ()=>{
     )
 }
 
-export default CategoryPage;
+export default AllProductsPage;
