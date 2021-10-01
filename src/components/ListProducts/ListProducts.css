@@ -33,9 +33,10 @@
 .TodosLosProductos button {
     border: 1px solid black;
     height: 60px;
-    width: 280px;
-    background: black;
-    color: white;
+    width: 120px;
+    background: transparent;
+    color: black;
+    text-decoration: none;
     font-size: 16px;
     text-align: center;
     border-radius: 40px;

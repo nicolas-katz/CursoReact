@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import './ProductDetails.css';
-import portada from '../../assets/portada.jpg';
-import CartButton from '../Product/CartButton';
 
-const ProductDetails = ()=> {
-    const [cantidadProducto, setCantidadProducto] = useState(0)
+const ProductDetails = prop=> {
+    const [cantidadProducto, setCantidadProducto] = useState(1)
     
     const restarProducto = ()=>{
-        cantidadProducto <= 0 ? setCantidadProducto(0) : setCantidadProducto(cantidadProducto - 1)
+        cantidadProducto <= 1 ? setCantidadProducto(1) : setCantidadProducto(cantidadProducto - 1)
     }
 
     const sumarProducto = ()=>{
@@ -15,23 +13,23 @@ const ProductDetails = ()=> {
     }
 
     return (
-        <div className="DetalleDeProducto">
-            <div className="ImagenDelProducto">
-                <img src={portada} />
-            </div>
-            <div className="InfoDelProducto">
-                <h3>Nombre del producto</h3>
-                <p>Precio del producto</p>
-                <p>Descripcion del producto</p>
-                <div className="CantidadProducto">
-                    <span onClick={restarProducto}>-</span>
-                    <p>{cantidadProducto}</p>
-                    <span onClick={sumarProducto}>+</span>
+        <div>
+            <div className="DetalleDeProducto">
+                <div className="ImagenDelProducto">
+                    <img src={prop.image} />
                 </div>
-                <CartButton />
-                <p>Stock disponible</p>
-                <p>Marca del producto</p>
-                <p>Tipo de producto</p>
+                <div className="InfoDelProducto">
+                    <h3>{prop.name}</h3>
+                    <p>{prop.price}</p>
+                    <p>Descripcion del producto</p>
+                    <div className="CantidadProducto">
+                        <span onClick={restarProducto}>-</span>
+                        <p>{cantidadProducto}</p>
+                        <span onClick={sumarProducto}>+</span>
+                    </div>
+                    <button>AGREGAR AL CARRITO</button>
+                    <p>NO HAY STOCK</p>
+                </div>
             </div>
         </div>
     )

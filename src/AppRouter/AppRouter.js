@@ -1,16 +1,26 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import HomePage from '../Pages/HomePage';
-import NotFoundPage from '../Pages/NotFoundPage';
-import { AiOutlineWhatsApp } from "react-icons/ai";
+import LogInPage from '../Pages/Account/LogInPage';
+import SignInPage from '../Pages/Account/SignInPage';
+import ItemDetails from '../Pages/ItemDetails/ItemDetails';
+import CategoryPage from '../Pages/CategoryPage';
+import { Redirect } from 'react-router';
 
 const AppRouter = ()=>{
     return (
         <BrowserRouter>
             <Switch>
+                <Route path="/categories/:catId" component={CategoryPage} />
+                <Route path="/products/:productId" component={ItemDetails} />
+                <Route path="/login" component={LogInPage} />
+                <Route path="/signin" component={SignInPage} />
                 <Route exact path="/" component={HomePage} />
-                <Route path="*" component={NotFoundPage} />
-                <AiOutlineWhatsApp className="WAP" />
+
+                <Route>
+                    <Redirect exact to="/" />
+                </Route>
+
             </Switch>
         </BrowserRouter>
     )

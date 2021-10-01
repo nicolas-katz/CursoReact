@@ -24,3 +24,13 @@
 .CantidadProducto p {
     margin: 0 20px;
 }
+
+.PreguntarStock.NoHayStock {
+    background: rgb(197, 43, 43);
+    color: white;
+}
+
+.PreguntarStock.HayStock {
+    background: rgb(81, 226, 81);
+    color: white;
+}

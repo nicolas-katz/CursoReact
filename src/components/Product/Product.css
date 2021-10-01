@@ -45,6 +45,11 @@
     outline: none;
 }
 
+.CardProduct a {
+    height: 40px;
+    width: 86px;
+}
+
 .ModalContainer {
     position: fixed;
     background: rgba(0, 0, 0, 0.411);

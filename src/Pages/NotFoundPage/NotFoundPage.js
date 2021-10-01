@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 const NotFoundPage = ()=>{
     return (
         <div className="NotFoundPageContainer">
-            <h1>Hubo un error, no encontramos esta página. Para volver al home ingrese <Link to="/">aquí</Link></h1>
+            <h2>Oops! Page not found.</h2>
+            <h1>404</h1>
+            <h4>We can't find the page you're looking for.</h4>
+            <Link to="/"><button>GO BACK HOME</button></Link>
         </div>
     )
 }

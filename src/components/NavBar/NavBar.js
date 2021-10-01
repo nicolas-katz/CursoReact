@@ -1,11 +1,12 @@
 import './NavBar.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { AiOutlineUser, AiOutlineDown } from "react-icons/ai";
 import { BsBag } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 import { FiHeart } from "react-icons/fi";
 import Logo from '../../assets/logo.png';
-import { Link } from 'react-router-dom';
+import { NavLink, Link, useParams } from 'react-router-dom';
+import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos';
 
 const NavBar = () => {
 
@@ -34,6 +35,29 @@ const NavBar = () => {
         document.querySelector(".MenuCarrito").classList.remove("openCartMenu");
     }
 
+    const categories = [
+        {
+            id: "1",
+            address: "/categories/relojes",
+            name: "Relojes",
+        },
+        {
+            id: "2",
+            address: "/categories/celulares",
+            name: "Celulares",
+        },
+        {
+            id: "3",
+            address: "/categories/tablets",
+            name: "Tablets",
+        },
+        {
+            id: "4",
+            address: "/categories/laptops",
+            name: "Laptops",
+        },
+    ]
+
     return(
 
         <header>
@@ -43,18 +67,19 @@ const NavBar = () => {
                 </div>
                 <div className="Navegacion">
                     <ul>
-                        <li><Link to="/accesorios">Accesorios</Link></li>
-                        <li><Link to="/celulares">Celulares</Link></li>
-                        <li><Link to="/tablets">Tablets</Link></li>
-                        <li><Link to="/laptops">Laptops</Link></li>
+                        {categories.map(categorie=>{
+                            return(
+                                <li><NavLink activeClassName="ActiveNavLink" to={categorie.address}>{categorie.name}</NavLink></li>
+                            )
+                        })}
                         <span>|</span>
                         <div className="Botones">
                             <div onClick={abrirDropdown} className="UserContenedor">
                                 <AiOutlineUser className="User" />
                                 <AiOutlineDown className="DropdownUser" />  
                                 <div className="Dropdown">
-                                    <a>Log in</a>
-                                    <a>Sign in</a>
+                                    <Link to="/login">Log in</Link>
+                                    <Link to="/signin">Sign in</Link>
                                 </div>                              
                             </div>
                             <FiHeart onClick={OpenFavMenu} className="Favs" />

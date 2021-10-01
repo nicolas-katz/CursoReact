@@ -1,12 +1,36 @@
 import React from 'react';
 import './Footer.css';
 import Logo from '../../assets/logo.png';
-import { AiOutlineInstagram, AiOutlineFacebook, AiOutlinePhone } from 'react-icons/ai'
-import { FaCcVisa, FaCcDinersClub, FaCcMastercard, FaMapPin } from 'react-icons/fa'
-import { RiSendPlaneLine } from 'react-icons/ri'
-import { CgMail } from 'react-icons/cg'
+import { AiOutlineInstagram, AiOutlineFacebook, AiOutlinePhone } from 'react-icons/ai';
+import { FaCcVisa, FaCcDinersClub, FaCcMastercard, FaMapPin } from 'react-icons/fa';
+import { RiSendPlaneLine } from 'react-icons/ri';
+import { CgMail } from 'react-icons/cg';
+import { Link } from 'react-router-dom';
 
 const Footer = ()=> {
+
+    const categories = [
+        {
+            id: "1",
+            address: "/categories/relojes",
+            name: "Relojes",
+        },
+        {
+            id: "2",
+            address: "/categories/celulares",
+            name: "Celulares",
+        },
+        {
+            id: "3",
+            address: "/categories/tablets",
+            name: "Tablets",
+        },
+        {
+            id: "4",
+            address: "/categories/laptops",
+            name: "Laptops",
+        },
+    ]
 
     return (
         <footer>
@@ -16,10 +40,11 @@ const Footer = ()=> {
                 </div>
                 <div className="FooterNav">
                     <h5>Navegación</h5>
-                    <a>Accesorios</a>
-                    <a>Celulares</a>
-                    <a>Tablets</a>
-                    <a>Laptops</a>
+                    {categories.map(categorie=>{
+                        return(
+                            <Link to={categorie.address}>{categorie.name}</Link>
+                        )
+                    })}
                 </div>
                 <div className="FooterMediosDePago">
                     <h5>Medios de pago</h5>

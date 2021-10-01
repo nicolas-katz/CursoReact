@@ -28,6 +28,8 @@ footer a {
     flex-direction: column;
     margin-bottom: 8px;
     font-size: 15px;
+    color: white;
+    text-decoration: none;
 }
 
 footer p {

@@ -8,7 +8,7 @@ header {
 }
 
 header.abajo {
-    background: rgba(0, 0, 0, 0.568);
+    background: rgba(0, 0, 0, 0.342);
 }
 
 header.abajo .HeaderContainer {
@@ -44,6 +44,10 @@ header.abajo .HeaderContainer {
     cursor: pointer;
     font-weight: lighter;
     text-decoration: none;
+}
+
+.Navegacion ul li a.ActiveNavLink {
+    font-weight: 500;
 }
 
 .Navegacion ul span {
@@ -113,6 +117,8 @@ header.abajo .HeaderContainer {
     margin-left: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
+    color: black;
+    text-decoration: none;
 }
 
 .Dropdown a:first-of-type {
