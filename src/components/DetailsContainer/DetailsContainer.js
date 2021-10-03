@@ -30,7 +30,7 @@ const DetailsContainer = ()=>{
                         ProductId === producto.id ? <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} /> : null
                     )
                 })}
-                {Productos.length !== 0 ? null : <div color="Dark" className="CircularProgress">Cargando productos...</div>}
+                {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}
         </div>
     )
 

@@ -1,5 +1,5 @@
 import './Product.css';
-import React , { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Product = prop => {
@@ -12,15 +12,9 @@ const Product = prop => {
       document.querySelector(".ModalContainer").classList.remove("openModalContainer");
     }
 
-    const [sumarProducto, setSumarProducto] = useState(0);
-
-    const sumarAlCarrito = ()=>{
-        sumarProducto >= 9 ? setSumarProducto(9) : setSumarProducto(sumarProducto + 1)
-    }
-
     return(
       <div className="CardProduct">
-        <img src={`./assets/products/${prop.image}`} />
+        <Link to={prop.link}><img src={`./assets/products/${prop.image}`} /></Link>
         <h3>{prop.name}</h3>
         <p>{prop.price}</p>
         <div onClick={openModal} className="VistaPrevia">VISTA PREVIA</div>

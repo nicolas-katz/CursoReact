@@ -32,7 +32,7 @@ const CategoryPage = ()=>{
             <div className="CategoriasContainer">
                 {Productos.map((producto)=>{
                     return (
-                        ProductCategorie === producto.categorie ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} />  : null
+                        ProductCategorie === producto.categorie ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} />  : null
                     )
                 })}
                 {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}

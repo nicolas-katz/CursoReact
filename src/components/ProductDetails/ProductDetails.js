@@ -13,7 +13,7 @@ const ProductDetails = prop=> {
     }
 
     return (
-        <div>
+        <div className="Contenedor">
             <div className="DetalleDeProducto">
                 <div className="ImagenDelProducto">
                     <img src={prop.image} />
