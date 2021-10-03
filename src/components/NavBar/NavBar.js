@@ -1,39 +1,12 @@
 import './NavBar.css';
-import React, { useEffect, useState } from 'react';
-import { AiOutlineUser, AiOutlineDown } from "react-icons/ai";
-import { BsBag } from "react-icons/bs";
-import { IoMdClose } from "react-icons/io";
-import { FiHeart } from "react-icons/fi";
+import React from 'react';
 import Logo from '../../assets/logo.png';
-import { NavLink, Link, useParams } from 'react-router-dom';
-import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos';
+import { NavLink, Link } from 'react-router-dom';
+import User from './UsuarioButtons/User';
+import Cart from './UsuarioButtons/Cart';
+import Fav from './UsuarioButtons/Fav';
 
 const NavBar = () => {
-
-    window.addEventListener("scroll", function(){
-        document.querySelector("header").classList.toggle("abajo", window.scrollY > 0);
-    })
-
-    const abrirDropdown = ()=>{
-        document.querySelector(".Dropdown").classList.toggle("active");
-        document.querySelector(".DropdownUser").classList.toggle("changeDirection");
-    }
-
-    const OpenFavMenu = ()=> {
-        document.querySelector(".MenuFavoritos").classList.add("openFavMenu");
-    }
-
-    const CloseFavMenu = ()=> {
-        document.querySelector(".MenuFavoritos").classList.remove("openFavMenu");
-    }
-
-    const OpenCartMenu = ()=> {
-        document.querySelector(".MenuCarrito").classList.add("openCartMenu");
-    }
-
-    const CloseCartMenu = ()=> {
-        document.querySelector(".MenuCarrito").classList.remove("openCartMenu");
-    }
 
     const categories = [
         {
@@ -57,54 +30,33 @@ const NavBar = () => {
             name: "Laptops",
         },
     ]
-
-    return(
+    
+    return (
 
         <header>
             <div className="HeaderContainer">
                 <div className="Logo">
-                    <img src={Logo} />
+                    <Link to="/"><img src={Logo} /></Link>
                 </div>
                 <div className="Navegacion">
                     <ul>
-                        {categories.map(categorie=>{
+                        {categories.map(category=>{
                             return(
-                                <li><NavLink activeClassName="ActiveNavLink" to={categorie.address}>{categorie.name}</NavLink></li>
+                                <li>
+                                    <NavLink activeClassName="ActiveNavLink" to={category.address}>{category.name}</NavLink>
+                                </li>
                             )
                         })}
-                        <span>|</span>
-                        <div className="Botones">
-                            <div onClick={abrirDropdown} className="UserContenedor">
-                                <AiOutlineUser className="User" />
-                                <AiOutlineDown className="DropdownUser" />  
-                                <div className="Dropdown">
-                                    <Link to="/login">Log in</Link>
-                                    <Link to="/signin">Sign in</Link>
-                                </div>                              
-                            </div>
-                            <FiHeart onClick={OpenFavMenu} className="Favs" />
-                            <div className="MenuFavoritos">
-                                <div className="HeaderMenuFavoritos">
-                                    <h4>Wishlist</h4>
-                                    <IoMdClose className="CloseFavMenu" onClick={CloseFavMenu} />
-                                </div>
-                            </div>
-                            <div className="CarritoContenedor" onClick={OpenCartMenu}>
-                                <BsBag className="Cart" />
-                                <label>0</label>
-                            </div>
-                            <div className="MenuCarrito">
-                                <div className="HeaderMenuCarrito">
-                                    <h4>My Cart</h4>
-                                    <IoMdClose className="CloseCartMenu" onClick={CloseCartMenu} />
-                                </div>
-                            </div>              
-                        </div>
                     </ul>
+                </div>
+                <div className="Usuario">
+                    <User />
+                    <Fav />
+                    <Cart />
                 </div>
             </div>
         </header>
-        
+
     )
 
 }

@@ -20,13 +20,10 @@ const Product = prop => {
 
     return(
       <div className="CardProduct">
-        <img onClick={openModal} src={`./assets/products/${prop.image}`} />
+        <img src={`./assets/products/${prop.image}`} />
         <h3>{prop.name}</h3>
         <p>{prop.price}</p>
-        <div className="CartButtonContainer">
-            <button onClick={sumarAlCarrito}>COMPRAR</button>
-            <Link to={prop.link}><button>VER</button></Link>
-        </div>
+        <div onClick={openModal} className="VistaPrevia">VISTA PREVIA</div>
         <div onClick={closeModal} className="ModalContainer">
           <div className="ModalProduct">
             <img src={`./assets/products/${prop.image}`} />

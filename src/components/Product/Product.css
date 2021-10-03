@@ -1,53 +1,45 @@
 .CardProduct {
-    width: 23%;
-    height: 500px;
-    text-align: center;
+    width: 24%;
+    height: 480px;
     position: relative;
     padding-top: 18px;
 }
 
 .CardProduct img {
     width: 100%;
-    height: 360px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 4px;
 }
 
 .CardProduct h3 {
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 14px;
+    font-size: 16px;
+    margin-top: 10px;
+    text-transform: uppercase;
 }
 
 .CardProduct p {
     font-size: 16px;
+    color: rgb(78, 78, 78);
+    margin-top: -14px;
+}
+
+.VistaPrevia {
+    opacity: 0;
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 93.5%;
+    background: rgb(235, 235, 235);
     color: black;
-    letter-spacing: -1px;
-    margin-top: -16px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    transition: 1s;
+    cursor: pointer;
 }
 
-.CartButtonContainer {
-    display: grid;
-    grid-template-columns: 50% 30%;
-    gap: 5%;
-    place-items: center;
-    place-content: center;
-}
-
-.CardProduct button {
-    background: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.507);
-    width: 100%;
-    height: 40px;
-    font-size: 14px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    outline: none;
-}
-
-.CardProduct a {
-    height: 40px;
-    width: 86px;
+.CardProduct:hover .VistaPrevia {
+    opacity: 1;
 }
 
 .ModalContainer {

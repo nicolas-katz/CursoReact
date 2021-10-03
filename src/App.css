@@ -1,5 +1,5 @@
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
 
 body {
@@ -23,4 +23,14 @@ body {
     z-index: 10;
     font-size: 24px;
     font-weight: lighter;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: black;
+    border: 2px solid white;
 }

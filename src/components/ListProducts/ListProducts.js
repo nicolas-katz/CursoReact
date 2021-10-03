@@ -10,7 +10,7 @@ const ListProducts = ()=> {
     const getProducts = new Promise( resolve=>{
         setTimeout(()=>{
             resolve(ListadoDeProductos)
-        }, 3000)
+        }, 1000)
     }) 
 
     useEffect(()=>{
@@ -21,20 +21,25 @@ const ListProducts = ()=> {
 
     return (
         <section className="SectionProductos">
+
             <div className="SectionProductosTitulo">
-                <h2>ELIGE, PAGA Y RECIBE TU PEDIDO <strong>SIN MOVERTE DE TU CASA.</strong></h2>
+                <h2>EXPLORA ROOMIFY</h2>
+                <h3>PRODUCTOS DESTACADOS</h3>
             </div>
+
             <div className="CardsContainer">
                 {Productos.map((producto)=>{
                     return (
-                        producto.homePage === "Yes" ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} /> : null
+                        producto.homePage === "Yes" ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} /> : null
                     )
                 })}
-                {Productos.length !== 0 ? null : <div color="Dark" className="CircularProgress">Cargando productos...</div>}
+                {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}
             </div> 
+
             <div className="TodosLosProductos">
-                <Link to="/allproducts"><button>Ver más &rarr;</button></Link>
+                <Link to="/allproducts"><button>CONOCER TODOS LOS PRODUCTOS</button></Link>
             </div>
+
         </section>
     )
 }

@@ -1,0 +1,32 @@
+.Contenedor {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    margin-bottom: 60px;
+    padding: 0 60px;
+}
+
+.CategoriasContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.CategoriasContainer .CardProduct {
+    margin: 0 6px;
+}
+
+.Pagination {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.Pagination a {
+    color: gray;
+    text-decoration: none;
+}
+
+.CargandoProductos {
+    margin: 40px auto;
+}
