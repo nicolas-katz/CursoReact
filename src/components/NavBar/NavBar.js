@@ -1,5 +1,5 @@
 import './NavBar.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Logo from '../../assets/logo.png';
 import { NavLink, Link } from 'react-router-dom';
 import User from './UsuarioButtons/User';
@@ -30,7 +30,7 @@ const NavBar = () => {
             name: "Laptops",
         },
     ]
-    
+
     return (
 
         <header>

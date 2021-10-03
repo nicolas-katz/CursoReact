@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { AiOutlineInstagram, AiOutlineFacebook } from 'react-icons/ai'
+import { AiOutlineInstagram, AiOutlineFacebook } from 'react-icons/ai';
 
 const Footer = ()=> {
 

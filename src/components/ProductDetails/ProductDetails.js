@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './ProductDetails.css';
+import { FiHeart, FiMinus } from 'react-icons/fi'
+import { Link } from 'react-router-dom';
 
 const ProductDetails = prop=> {
     const [cantidadProducto, setCantidadProducto] = useState(1)
@@ -9,7 +11,11 @@ const ProductDetails = prop=> {
     }
 
     const sumarProducto = ()=>{
-        cantidadProducto >= 10 ? setCantidadProducto(10) : setCantidadProducto(cantidadProducto + 1)
+        cantidadProducto >= prop.stock ? setCantidadProducto(prop.stock) : setCantidadProducto(cantidadProducto + 1)
+    }
+
+    const abrirDescription = ()=> {
+        document.querySelector(".DescripcionBody").classList.toggle("active");
     }
 
     return (
@@ -19,16 +25,39 @@ const ProductDetails = prop=> {
                     <img src={prop.image} />
                 </div>
                 <div className="InfoDelProducto">
-                    <h3>{prop.name}</h3>
-                    <p>{prop.price}</p>
-                    <p>Descripcion del producto</p>
-                    <div className="CantidadProducto">
-                        <span onClick={restarProducto}>-</span>
-                        <p>{cantidadProducto}</p>
-                        <span onClick={sumarProducto}>+</span>
+                    <div className="Pagination">
+                        <Link to="/">Inicio</Link> / <Link to={prop.link}>{prop.category}</Link> / <span>{prop.name}</span>
                     </div>
-                    <button>AGREGAR AL CARRITO</button>
-                    <p>NO HAY STOCK</p>
+                    <h3>{prop.name}</h3>
+                    <h4>{prop.price}</h4>
+                    <h5>COLORES</h5>
+                    <select>
+                        <option className="Elegir">ELEGIR</option>
+                        <option>WHITE</option>
+                        <option>BLACK</option>
+                        <option>GREY</option>
+                        <option>LIGHT</option>
+                    </select>
+                    <div className="CantidadProducto">
+                        <input value={cantidadProducto} />
+                        <div className="SumarYRestar">
+                            <span onClick={sumarProducto}>+</span>
+                            <span onClick={restarProducto}>-</span>
+                        </div>
+                    </div>
+                    <div className="Agregar">
+                        <button>AGREGAR AL CARRITO</button>
+                        <FiHeart className="AgregarFav" />
+                    </div>
+                    <div className="Descripcion">
+                        <div onClick={abrirDescription} className="DescripcionHeader">
+                            <h5>DESCRIPCIÓN</h5>
+                            <FiMinus className="Icon" />
+                        </div>
+                        <div className="DescripcionBody">
+                            <h5>{prop.description}</h5>
+                        </div>
+                    </div>  
                 </div>
             </div>
         </div>

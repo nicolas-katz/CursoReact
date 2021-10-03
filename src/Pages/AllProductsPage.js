@@ -23,7 +23,7 @@ const AllProductsPage = ()=>{
     return(
         <div className="Contenedor">
             <div className="Pagination">
-                <Link to="/">Inicio</Link><span> / All Products</span>
+                <Link to="/">Inicio</Link> / <span>Productos</span>
             </div>
             <div className="CategoriasContainer">
                 {Productos.map((producto)=>{
@@ -31,7 +31,7 @@ const AllProductsPage = ()=>{
                         <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} />
                     )
                 })}
-                {Productos.length !== 0 ? null : <div color="Dark" className="CircularProgress">Cargando productos...</div>}
+                {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}
             </div>
         </div> 
     )

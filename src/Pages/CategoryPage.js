@@ -26,8 +26,8 @@ const CategoryPage = ()=>{
 
     return(
         <div className="Contenedor">
-             <div className="Pagination">
-                <Link to="/">Inicio</Link><span> / {ProductCategorie}</span>
+            <div className="Pagination">
+                <Link to="/">Inicio</Link> / <Link to="/allproducts">PRODUCTOS</Link> / <span>{ProductCategorie}</span>
             </div>
             <div className="CategoriasContainer">
                 {Productos.map((producto)=>{
@@ -35,7 +35,7 @@ const CategoryPage = ()=>{
                         ProductCategorie === producto.categorie ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} />  : null
                     )
                 })}
-                {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}
+                {Productos.length !== 0 ? null : <div className="CargandoProductos">Cargando productos...</div>}
             </div>
         </div> 
     )

@@ -12,7 +12,7 @@ const DetailsContainer = ()=>{
     const getProducts = new Promise( resolve=>{
         setTimeout(()=>{
             resolve(ListadoDeProductos)
-        }, 1000)
+        }, 10)
     }) 
 
     useEffect(()=>{
@@ -27,10 +27,13 @@ const DetailsContainer = ()=>{
         <div className="DetailsContainer">
            {Productos.map((producto)=>{
                     return (
-                        ProductId === producto.id ? <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} /> : null
+                        ProductId === producto.id 
+                        ? 
+                        <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} stock={producto.stock} link={`/categories/${producto.categorie}`} category={producto.categorie} />
+                        : 
+                        null
                     )
                 })}
-                {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}
         </div>
     )
 
