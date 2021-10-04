@@ -12,7 +12,7 @@ const DetailsContainer = ()=>{
     const getProducts = new Promise( resolve=>{
         setTimeout(()=>{
             resolve(ListadoDeProductos)
-        }, 10)
+        }, 1000)
     }) 
 
     useEffect(()=>{
@@ -34,6 +34,7 @@ const DetailsContainer = ()=>{
                         null
                     )
                 })}
+            {Productos.length !== 0 ? null : <div className="CargandoProductos">Cargando productos...</div>}
         </div>
     )
 

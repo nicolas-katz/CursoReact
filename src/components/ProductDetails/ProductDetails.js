@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import './ProductDetails.css';
-import { FiHeart, FiMinus } from 'react-icons/fi'
+import { FiMinus, FiHeart } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
+import { FaPinterestP, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
+import ItemCount from './ItemCount'
 
 const ProductDetails = prop=> {
+    const abrirDescription = ()=> {
+        document.querySelector(".DescripcionBody").classList.toggle("active");
+    }
+
     const [cantidadProducto, setCantidadProducto] = useState(1)
     
-    const restarProducto = ()=>{
+    const onLess = ()=>{
         cantidadProducto <= 1 ? setCantidadProducto(1) : setCantidadProducto(cantidadProducto - 1)
     }
 
-    const sumarProducto = ()=>{
+    const onAdd = ()=>{
         cantidadProducto >= prop.stock ? setCantidadProducto(prop.stock) : setCantidadProducto(cantidadProducto + 1)
-    }
-
-    const abrirDescription = ()=> {
-        document.querySelector(".DescripcionBody").classList.toggle("active");
     }
 
     return (
@@ -38,15 +40,9 @@ const ProductDetails = prop=> {
                         <option>GREY</option>
                         <option>LIGHT</option>
                     </select>
-                    <div className="CantidadProducto">
-                        <input value={cantidadProducto} />
-                        <div className="SumarYRestar">
-                            <span onClick={sumarProducto}>+</span>
-                            <span onClick={restarProducto}>-</span>
-                        </div>
-                    </div>
+                    <ItemCount stock={prop.stock} quantity={cantidadProducto} onAdd={onAdd} onLess={onLess} />
                     <div className="Agregar">
-                        <button>AGREGAR AL CARRITO</button>
+                        <button >AGREGAR AL CARRITO</button>
                         <FiHeart className="AgregarFav" />
                     </div>
                     <div className="Descripcion">
@@ -58,6 +54,12 @@ const ProductDetails = prop=> {
                             <h5>{prop.description}</h5>
                         </div>
                     </div>  
+                    <div className="RedesSociales">
+                        <FaInstagram className="Ig" />
+                        <FaFacebookF className="Fb" />
+                        <FaTwitter className="Tw" />
+                        <FaPinterestP className="Pt" />
+                    </div>
                 </div>
             </div>
         </div>

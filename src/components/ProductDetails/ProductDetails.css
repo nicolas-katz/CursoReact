@@ -137,3 +137,27 @@
     opacity: 0;
     visibility: hidden;
 }
+
+.RedesSociales {
+    margin-top: 60px;
+    font-size: 16px;
+}
+
+.Ig {
+    color: rgb(179, 68, 179);
+    margin-right: 10px;
+}
+
+.Fb {
+    color: rgb(44, 44, 80);
+    margin-right: 10px;
+}
+
+.Tw {
+    color: rgb(117, 117, 226);
+    margin-right: 10px;
+}
+
+.Pt {
+    color: rgb(196, 50, 50);
+}
