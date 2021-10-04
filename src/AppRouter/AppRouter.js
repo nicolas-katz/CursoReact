@@ -9,12 +9,14 @@ import { Redirect } from 'react-router';
 import AllProductsPage from '../Pages/AllProductsPage';
 import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
+import Cart from '../Pages/Cart';
 
 const AppRouter = ()=>{
     return (
         <BrowserRouter>
             <NavBar />
             <Switch>
+                <Route path="/cart" component={Cart} />
                 <Route path="/categories/:catId" component={CategoryPage} />
                 <Route path="/allproducts" component={AllProductsPage} />
                 <Route path="/products/:productId" component={ItemDetails} />

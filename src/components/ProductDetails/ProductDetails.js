@@ -42,7 +42,7 @@ const ProductDetails = prop=> {
                     </select>
                     <ItemCount stock={prop.stock} quantity={cantidadProducto} onAdd={onAdd} onLess={onLess} />
                     <div className="Agregar">
-                        <button >AGREGAR AL CARRITO</button>
+                        <Link to="/cart"><button>AGREGAR AL CARRITO</button></Link>
                         <FiHeart className="AgregarFav" />
                     </div>
                     <div className="Descripcion">
