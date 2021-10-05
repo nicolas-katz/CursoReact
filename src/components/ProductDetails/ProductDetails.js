@@ -24,11 +24,11 @@ const ProductDetails = prop=> {
         <div className="Contenedor">
             <div className="DetalleDeProducto">
                 <div className="ImagenDelProducto">
-                    <img src={prop.image} />
+                    <img scr={prop.image} />
                 </div>
                 <div className="InfoDelProducto">
                     <div className="Pagination">
-                        <Link to="/">Inicio</Link> / <Link to={prop.link}>{prop.category}</Link> / <span>{prop.name}</span>
+                        <Link to="/">Inicio</Link> / <Link to="/products">Productos</Link> / <Link to={prop.link}>{prop.category}</Link> / <span>{prop.name}</span>
                     </div>
                     <h3>{prop.name}</h3>
                     <h4>{prop.price}</h4>

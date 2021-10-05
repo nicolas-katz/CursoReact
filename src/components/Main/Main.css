@@ -5,10 +5,10 @@ main {
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
-    height: 1000px;
+    height: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     transition: 1s;
     z-index: 9;
@@ -16,15 +16,18 @@ main {
 }
 
 .MainContainer {
-    margin-bottom: 140px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 main h1 {
     color: white;
-    font-size: 42px;
+    font-size: 24px;
     text-transform: uppercase;
-    width: 500px;
+    width: 90%;
     text-align: center;
     word-spacing: 4px;
 }
@@ -36,12 +39,12 @@ main button {
     width: max-content;
     border-bottom: 1px solid white;
     background: transparent;
-    font-size: 26px;
+    font-size: 20px;
     color: white;
     text-decoration: none;
     cursor: pointer;
     transition: .7s;
-    margin-top: -40px;
+    margin-top: -20px;
     text-transform: uppercase;
     letter-spacing: -2px;
     font-style: italic;
@@ -50,4 +53,37 @@ main button {
 main button:hover {
     color: gray;
     border-color: gray;
+}
+
+@media only screen and (min-width: 768px) {
+    main {
+        height: 700px;
+        justify-content: flex-end;
+    }
+
+    .MainContainer {
+        margin-bottom: 140px;
+    }
+    
+    main h1 {
+        font-size: 36px;
+        width: 440px;
+    }
+    
+    main button {
+        font-size: 26px;
+        margin-top: -40px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main {
+        height: 1000px;
+    }
+    
+    main h1 {
+        font-size: 42px;
+        width: 500px;
+    }
+    
 }

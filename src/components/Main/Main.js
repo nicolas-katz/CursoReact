@@ -9,7 +9,7 @@ const Main = ()=>{
         <main>
             <div className="MainContainer">
                 <h1>La mejor tecnología, siempre en tus manos</h1>
-                <Link to="/allproducts"><button>Shop now</button></Link>
+                <Link to="/products"><button>Shop now</button></Link>
             </div>
         </main>
 

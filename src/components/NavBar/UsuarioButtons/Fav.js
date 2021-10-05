@@ -1,5 +1,5 @@
 import React from 'react';
-import './Fav.css';
+import './CartyFavMenu.css';
 import { FiHeart } from "react-icons/fi";
 import { IoIosArrowForward } from 'react-icons/io';
 

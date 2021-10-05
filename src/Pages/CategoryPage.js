@@ -27,7 +27,7 @@ const CategoryPage = ()=>{
     return(
         <div className="Contenedor">
             <div className="Pagination">
-                <Link to="/">Inicio</Link> / <Link to="/allproducts">PRODUCTOS</Link> / <span>{ProductCategorie}</span>
+                <Link to="/">Inicio</Link> / <Link to="/products">PRODUCTOS</Link> / <span>{ProductCategorie}</span>
             </div>
             <div className="CategoriasContainer">
                 {Productos.map((producto)=>{

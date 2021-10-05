@@ -18,7 +18,7 @@ const AppRouter = ()=>{
             <Switch>
                 <Route path="/cart" component={Cart} />
                 <Route path="/categories/:catId" component={CategoryPage} />
-                <Route path="/allproducts" component={AllProductsPage} />
+                <Route exact path="/products" component={AllProductsPage} />
                 <Route path="/products/:productId" component={ItemDetails} />
                 <Route path="/login" component={LogInPage} />
                 <Route path="/signin" component={SignInPage} />

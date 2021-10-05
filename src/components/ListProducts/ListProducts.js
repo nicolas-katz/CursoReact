@@ -37,7 +37,7 @@ const ListProducts = ()=> {
             </div> 
 
             <div className="TodosLosProductos">
-                <Link to="/allproducts"><button>CONOCER TODOS LOS PRODUCTOS</button></Link>
+                <Link to="/products"><button>CONOCER TODOS LOS PRODUCTOS</button></Link>
             </div>
 
         </section>

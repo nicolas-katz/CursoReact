@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cart.css';
+import './CartyFavMenu.css';
 import { BsBag } from "react-icons/bs";
 import { IoIosArrowForward } from 'react-icons/io';
 

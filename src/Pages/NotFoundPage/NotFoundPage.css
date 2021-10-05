@@ -1,0 +1,41 @@
+.NotFoundPageContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 100;
+    background: rgb(184, 223, 228);
+}
+
+.NotFoundPageContainer h2 {
+    font-size: 32px;
+    letter-spacing: -1px;
+    font-weight: lighter;
+}
+
+.NotFoundPageContainer h1 {
+    font-size: 160px;
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.NotFoundPageContainer h4 {
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.NotFoundPageContainer a button {
+    border: 1px solid black;
+    background: black;
+    border-radius: 2px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+}

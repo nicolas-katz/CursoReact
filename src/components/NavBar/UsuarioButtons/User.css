@@ -6,7 +6,7 @@
 .DropdownUser {
     position: absolute;
     background: white;
-    top: 53px;  
+    top: 40px;  
     left: -80px;
     display: flex;
     flex-direction: column;

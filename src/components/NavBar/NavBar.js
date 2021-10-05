@@ -5,8 +5,20 @@ import { NavLink, Link } from 'react-router-dom';
 import User from './UsuarioButtons/User';
 import Cart from './UsuarioButtons/Cart';
 import Fav from './UsuarioButtons/Fav';
+import { HiOutlineMenuAlt1 } from 'react-icons/hi';
+import { MdClose } from 'react-icons/md';
 
 const NavBar = () => {
+
+    const abrirMenu = ()=>{
+        document.querySelector(".Navegacion").classList.add("active");
+        document.querySelector(".CloseMenu").classList.add("active");
+    }
+
+    const cerrarMenu = ()=>{
+        document.querySelector(".Navegacion").classList.remove("active");
+        document.querySelector(".CloseMenu").classList.remove("active");
+    }
 
     const categories = [
         {
@@ -43,7 +55,7 @@ const NavBar = () => {
                         {categories.map(category=>{
                             return(
                                 <li>
-                                    <NavLink activeClassName="ActiveNavLink" to={category.address}>{category.name}</NavLink>
+                                    <NavLink onClick={cerrarMenu} activeClassName="ActiveNavLink" to={category.address}>{category.name}</NavLink>
                                 </li>
                             )
                         })}
@@ -55,6 +67,8 @@ const NavBar = () => {
                     <Cart />
                 </div>
             </div>
+            <HiOutlineMenuAlt1 onClick={abrirMenu} className="BurgerMenu" />
+            <MdClose onClick={cerrarMenu} className="CloseMenu" />
         </header>
 
     )
