@@ -1,13 +1,13 @@
 import React from "react";
 
-const ItemCount = prop =>{
-
+const ItemCount = ({quantity, onAdd, onLess}) =>{
+    
     return(
         <div className="CantidadProducto">
-            <input value={prop.quantity} />
+            <input value={quantity} />
             <div className="SumarYRestar">
-                <span onClick={prop.onAdd}>+</span>
-                <span onClick={prop.onLess}>-</span>
+                <span onClick={onAdd}>+</span>
+                <span onClick={onLess}>-</span>
             </div>
         </div>
     )

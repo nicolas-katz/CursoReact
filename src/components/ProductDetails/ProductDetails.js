@@ -1,23 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './ProductDetails.css';
 import { FiMinus, FiHeart } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 import { FaPinterestP, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import ItemCount from './ItemCount'
+import CartContext from '../../Context/CartContext';
 
 const ProductDetails = prop=> {
     const abrirDescription = ()=> {
         document.querySelector(".DescripcionBody").classList.toggle("active");
     }
 
-    const [cantidadProducto, setCantidadProducto] = useState(1)
-    
-    const onLess = ()=>{
-        cantidadProducto <= 1 ? setCantidadProducto(1) : setCantidadProducto(cantidadProducto - 1)
-    }
+    const {addProduct, onAdd, onLess, cantidadProducto} = useContext(CartContext);
 
-    const onAdd = ()=>{
-        cantidadProducto >= prop.stock ? setCantidadProducto(prop.stock) : setCantidadProducto(cantidadProducto + 1)
+    const addCart = ()=>{
+        addProduct(prop)
     }
 
     return (
@@ -36,13 +33,10 @@ const ProductDetails = prop=> {
                     <select>
                         <option className="Elegir">ELEGIR</option>
                         <option>WHITE</option>
-                        <option>BLACK</option>
-                        <option>GREY</option>
-                        <option>LIGHT</option>
                     </select>
-                    <ItemCount stock={prop.stock} quantity={cantidadProducto} onAdd={onAdd} onLess={onLess} />
+                    <ItemCount quantity={cantidadProducto} onAdd={onAdd} onLess={onLess} />
                     <div className="Agregar">
-                        <Link to="/cart"><button>AGREGAR AL CARRITO</button></Link>
+                        <button onClick={addCart}>AGREGAR AL CARRITO</button>
                         <FiHeart className="AgregarFav" />
                     </div>
                     <div className="Descripcion">

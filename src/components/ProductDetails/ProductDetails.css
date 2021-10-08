@@ -1,5 +1,5 @@
 .DetalleDeProducto {
-    margin: 40px 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -91,8 +91,7 @@
 }
 
 .Agregar button {
-    /* width: 78%; */
-    width: 220px;
+    width: 78%;
     border: none;
     background: rgb(194, 194, 194);
     height: 40px;
@@ -169,6 +168,7 @@
 @media only screen and (min-width: 768px) {
     .DetalleDeProducto {
         flex-direction: row;
+        margin: 40px 0;
     }
     
     .ImagenDelProducto {
@@ -180,10 +180,6 @@
     .InfoDelProducto {
         margin-left: 40px;
         width: 300px;
-    }
-
-    .Agregar button {
-        width: 234px;
     }
 }
 
@@ -198,9 +194,4 @@
         margin-left: 70px;
         width: 360px;
     }
-
-    .Agregar button {
-        width: 280px;
-    }
-
 }

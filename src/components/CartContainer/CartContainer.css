@@ -1,0 +1,19 @@
+.Carrito {
+    margin: 160px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Carrito h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.Carrito .CartProducts {
+    width: 600px;
+    margin-right: 20px;
+}
+
+.Carrito .OrderSummary {
+    width: 300px;
+}

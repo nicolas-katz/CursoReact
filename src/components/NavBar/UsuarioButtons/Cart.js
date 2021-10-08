@@ -1,28 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CartyFavMenu.css';
 import { BsBag } from "react-icons/bs";
-import { IoIosArrowForward } from 'react-icons/io';
+import CartWidget from './CartWidget';
 
 const Cart = ()=>{
 
-    const OpenCart = ()=>{
-        document.querySelector(".CartMenu").classList.add("active");
-    }
-
-    const CloseCart = ()=>{
-        document.querySelector(".CartMenu").classList.remove("active");
+    const [showCart, setShowCart] = useState(false);
+    
+    const handleCart = ()=>{
+        !showCart ? setShowCart(true) : setShowCart(false);
     }
 
     return (
 
         <div className="CartContainer">
-            <BsBag onClick={OpenCart} className="Cart" />
-            <div className="CartMenu">
-                <div className="CartHeader">
-                    <IoIosArrowForward onClick={CloseCart} className="CloseCart" />
-                    <h1>Carrito</h1>
-                </div>
-            </div>
+            <BsBag onClick={handleCart} className="Cart" />
+            <CartWidget show={showCart} close={handleCart} />
         </div>
 
     )

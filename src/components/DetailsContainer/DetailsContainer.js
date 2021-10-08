@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import ProductDetails from '../ProductDetails/ProductDetails';
 import './DetailsContainer.css';
 import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos';

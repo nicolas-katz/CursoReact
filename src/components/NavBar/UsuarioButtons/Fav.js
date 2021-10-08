@@ -1,28 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CartyFavMenu.css';
 import { FiHeart } from "react-icons/fi";
-import { IoIosArrowForward } from 'react-icons/io';
+import FavWidget from './FavWidget';
 
 const Fav = ()=>{
 
-    const openFav = ()=>{
-        document.querySelector(".FavMenu").classList.add("active");
-    }
-
-    const CloseFav = ()=>{
-        document.querySelector(".FavMenu").classList.remove("active");
+    const [showFav, setShowFav] = useState(false);
+    
+    const handleFav = ()=>{
+        !showFav ? setShowFav(true) : setShowFav(false);
     }
 
     return (
 
         <div className="FavContainer">
-            <FiHeart onClick={openFav} className="Fav" />
-            <div className="FavMenu">
-                <div className="FavHeader">
-                    <IoIosArrowForward onClick={CloseFav} className="CloseFav" />
-                    <h1>Favoritos</h1>
-                </div>
-            </div>
+            <FiHeart onClick={handleFav} className="Fav" />
+            <FavWidget show={showFav} close={handleFav} />
         </div>
 
     )
