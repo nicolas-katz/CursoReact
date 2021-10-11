@@ -8,7 +8,11 @@ import ItemCount from "../../ProductDetails/ItemCount";
 
 const CartWidget = ({show, close})=>{
 
-    const {products, onAdd, onLess, cantidadProducto} = useContext(CartContext);
+    const {products, onAdd, onLess, cantidadProducto, removeProduct} = useContext(CartContext);
+    
+    const removeCart = ()=>{
+        removeProduct(products)
+    }
 
     return(
         <div className={`CartWidget ${show ? 'active' : ''}`}>
@@ -30,7 +34,7 @@ const CartWidget = ({show, close})=>{
                                     </div>
                                 </div>
                                 <div>
-                                    <MdClose className="MdClose" />
+                                    <MdClose onClick={removeCart} className="MdClose" />
                                 </div>
                             </div>
                         )

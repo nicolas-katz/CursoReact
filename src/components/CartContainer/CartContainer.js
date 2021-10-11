@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import ItemCount from "../ProductDetails/ItemCount";
 import './CartContainer.css'
 import CartContext from "../../Context/CartContext";
@@ -7,7 +7,15 @@ import { MdClose } from "react-icons/md";
 
 const CartContainer = ()=>{
 
-    const {products, onAdd, onLess, cantidadProducto} = useContext(CartContext);
+    const {products, onAdd, onLess, cantidadProducto, removeProduct, clear} = useContext(CartContext);
+    
+    const removeCart = ()=>{
+        removeProduct(products)
+    }
+
+    const clearAll = ()=>{
+        clear()
+    }
 
     return (
         <div className="Carrito">
@@ -30,7 +38,7 @@ const CartContainer = ()=>{
                                     <div className="ContadorYPrecio">
                                         <ItemCount quantity={cantidadProducto} onAdd={onAdd} onLess={onLess} />
                                         <span>Total</span>
-                                        <MdClose />
+                                        <MdClose onClick={removeCart} />
                                     </div>
                                 </div>
                             );
@@ -38,7 +46,9 @@ const CartContainer = ()=>{
                     </div>
                 </div><div className="OrderSummary">
                         <h3>RESUMEN DEL PEDIDO</h3>
-                    </div></>
+                    </div>
+                    <button onClick={clearAll}>BORRAR TODOS</button>
+                    </>
             }
         </div>
     )
