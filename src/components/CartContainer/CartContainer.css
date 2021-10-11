@@ -9,9 +9,40 @@
     font-weight: normal;
 }
 
-.Carrito .CartProducts {
+.Carrito .CarritoProductos {
     width: 600px;
     margin-right: 20px;
+}
+
+.CarritoProductos .ProductoEnCarrito {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.200);
+    margin: 20px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.CarritoProductos .ProductoEnCarrito:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.200);
+}
+
+.ProductoEnCarrito .Producto, .ContadorYPrecio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.ProductoEnCarrito .ProductosDatos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.CarritoProductos .ProductoEnCarrito img {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
 }
 
 .Carrito .OrderSummary {

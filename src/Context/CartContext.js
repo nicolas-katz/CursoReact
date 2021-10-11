@@ -22,6 +22,7 @@ const CartProvider = ({children})=>{
         cantidadProducto >= 10 ? setCantidadProducto(10) : setCantidadProducto(cantidadProducto + 1)
     }
 
+    // Enviar context a la aplicación
     const data = {
         products,
         addProduct,

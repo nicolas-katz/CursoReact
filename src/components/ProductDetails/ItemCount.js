@@ -4,11 +4,9 @@ const ItemCount = ({quantity, onAdd, onLess}) =>{
     
     return(
         <div className="CantidadProducto">
+            <span onClick={onLess}>-</span>
             <input value={quantity} />
-            <div className="SumarYRestar">
-                <span onClick={onAdd}>+</span>
-                <span onClick={onLess}>-</span>
-            </div>
+            <span onClick={onAdd}>+</span>
         </div>
     )
 
