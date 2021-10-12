@@ -31,7 +31,7 @@ const CartWidget = ({show, close})=>{
                                     <div className="ProductData">
                                         <h3>{product.product.name}</h3>
                                         <h4>{product.product.price}</h4>
-                                        <span>{product.count >= product.product.stock ? product.product.stock : product.count }x{product.product.price}</span>
+                                        <span>x{product.count >= product.product.stock ? product.product.stock : product.count}</span>
                                     </div>
                                 </div>
                                 <div>

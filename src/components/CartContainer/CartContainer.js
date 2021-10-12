@@ -1,19 +1,16 @@
 import React, { useContext } from "react";
-import ItemCount from "../ProductDetails/ItemCount";
 import './CartContainer.css'
 import CartContext from "../../Context/CartContext";
 import { Link } from "react-router-dom";
-import { MdClose } from "react-icons/md";
-import IMAGES from "../../assets/IMAGES";
-import CustomImage from "../CustomImage/CustomImage";
+import ProductosEnCarrito from "./ProductosEnCarrito";
 
 const CartContainer = ()=>{
 
-    const {products, removeProduct, clear} = useContext(CartContext);
+    const {products, clear, removeProduct} = useContext(CartContext);
 
-    const arrImg = [
-        IMAGES.img1,
-    ]
+    const removeCart = (prop)=>{
+        removeProduct(prop)
+    }
 
     return (
         <div className="Carrito">
@@ -25,21 +22,7 @@ const CartContainer = ()=>{
                     <div className="CarritoProducto">
                         {products.map((product) => {
                             return (
-                                <div className="ProductoEnCarrito">
-                                    <div className="Producto">
-                                        {arrImg && arrImg.map(image => <CustomImage {...image} />)}
-                                        <div className="ProductosDatos">
-                                            <h3>{product.product.name}</h3>
-                                            <h4>{product.product.price}</h4>
-                                            <span>x{product.count}</span>
-                                        </div>
-                                    </div>
-                                    <div className="ContadorYPrecio">
-                                        <ItemCount stock={product.product.stock} />
-                                        <span>{product.count * product.product.price}</span>
-                                        <MdClose onClick={()=> removeProduct(product.product)} />
-                                    </div>
-                                </div>
+                               <ProductosEnCarrito stock={product.product.stock} name={product.product.name} price={product.product.price} count={product.count} removeCart={removeCart}/>
                             );
                         })}
                     </div>
