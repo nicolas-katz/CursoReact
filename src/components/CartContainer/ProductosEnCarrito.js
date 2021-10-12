@@ -24,12 +24,12 @@ const ProductosEnCarrito = (prop)=>{
                 <div className="ProductosDatos">
                     <h3>{prop.name}</h3>
                     <h4>{prop.price}</h4>
-                    <span>x{prop.count}</span>
+                    <span>x{prop.count >= prop.stock ? prop.stock : prop.count}</span>
                 </div>
             </div>
             <div className="ContadorYPrecio">
                 <ItemCount stock={prop.stock} onAdd={handleOnAdd} />
-                <span>{prop.count * prop.price}</span>
+                <span>{prop.count <= prop.stock ? prop.count * prop.price : prop.stock * prop.price}</span>
                 <MdClose onClick={()=> prop.removeCart(prop)} />
             </div>
         </div>
