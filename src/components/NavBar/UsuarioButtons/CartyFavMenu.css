@@ -102,6 +102,10 @@
     }
 }
 
+.CartProducts .Agregar {
+    display: none;
+}
+
 .CartProducts {
     margin: 20px;
     height: 68vh;
@@ -210,4 +214,8 @@
     font-weight: normal;
     color: black;
     font-size: 16px;
+}
+
+.ProductData .totalPrice {
+    display: none;
 }

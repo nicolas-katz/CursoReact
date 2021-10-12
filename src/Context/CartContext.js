@@ -1,11 +1,11 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useState } from "react";
 
 const CartContext = createContext({});
 
 const CartProvider = ({children})=>{
 
     const isInCart = (product)=>{
-        return products && products.some(element => element.product.id === product.id)
+        return products && products.some(element => element.product.name === product.name)
     }
 
     //  Agrego productos al carrito
@@ -15,7 +15,7 @@ const CartProvider = ({children})=>{
         let cartElement = {product, count}
         let cartAux = []
         if(isInCart(product)){
-            cartElement = products.find(element => element.product.id === product.id)
+            cartElement = products.find(element => element.product.name === product.name)
             cartElement.count = cartElement.count + count
             cartAux = [...products]
         } else{
@@ -27,34 +27,20 @@ const CartProvider = ({children})=>{
     // Borro producto del carrito
     const removeProduct = (product)=>{
         if(isInCart(product)) {
-            const CartProducts = products.filter(element => element.product.id !== product.id) || []
+            const CartProducts = products.filter(element => element.product.name !== product.name) || []
             setProducts([...CartProducts])
         }
     }
 
     // Borro todos los productos
     const clear = () => {
-        return setProducts([])
-      }
-
-    // Item count
-    const [cantidadProducto, setCantidadProducto] = useState(1)
-    
-    const onLess = ()=>{
-        cantidadProducto <= 1 ? setCantidadProducto(1) : setCantidadProducto(cantidadProducto - 1)
-    }
-
-    const onAdd = ()=>{
-        cantidadProducto >= 10 ? setCantidadProducto(10) : setCantidadProducto(cantidadProducto + 1)
+        setProducts([])
     }
 
     // Enviar context a la aplicación
     const data = {
         products,
         addProduct,
-        onAdd,
-        onLess,
-        cantidadProducto,
         removeProduct,
         isInCart,
         clear

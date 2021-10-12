@@ -4,18 +4,16 @@ import './CartContainer.css'
 import CartContext from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import { MdClose } from "react-icons/md";
+import IMAGES from "../../assets/IMAGES";
+import CustomImage from "../CustomImage/CustomImage";
 
 const CartContainer = ()=>{
 
-    const {products, onAdd, onLess, cantidadProducto, removeProduct, clear} = useContext(CartContext);
-    
-    const removeCart = ()=>{
-        removeProduct(products)
-    }
+    const {products, removeProduct, clear} = useContext(CartContext);
 
-    const clearAll = ()=>{
-        clear()
-    }
+    const arrImg = [
+        IMAGES.img1,
+    ]
 
     return (
         <div className="Carrito">
@@ -29,16 +27,15 @@ const CartContainer = ()=>{
                             return (
                                 <div className="ProductoEnCarrito">
                                     <div className="Producto">
-                                        <img src={`./assets/products/${product.image}`} />
+                                        {arrImg && arrImg.map(image => <CustomImage {...image} />)}
                                         <div className="ProductosDatos">
-                                            <h3>{product.name}</h3>
-                                            <h4>{product.price}</h4>
+                                            <h3>{product.product.name}</h3>
+                                            <h4>{product.product.price}</h4>
                                         </div>
                                     </div>
                                     <div className="ContadorYPrecio">
-                                        <ItemCount quantity={cantidadProducto} onAdd={onAdd} onLess={onLess} />
-                                        <span>Total</span>
-                                        <MdClose onClick={removeCart} />
+                                        <ItemCount stock={product.product.stock} total={product.product.price} />
+                                        <MdClose onClick={()=> removeProduct(product.product)} />
                                     </div>
                                 </div>
                             );
@@ -47,7 +44,7 @@ const CartContainer = ()=>{
                 </div><div className="OrderSummary">
                         <h3>RESUMEN DEL PEDIDO</h3>
                     </div>
-                    <button onClick={clearAll}>BORRAR TODOS</button>
+                    <button onClick={()=> clear()}>BORRAR TODOS</button>
                     </>
             }
         </div>
