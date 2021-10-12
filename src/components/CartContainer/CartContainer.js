@@ -31,10 +31,12 @@ const CartContainer = ()=>{
                                         <div className="ProductosDatos">
                                             <h3>{product.product.name}</h3>
                                             <h4>{product.product.price}</h4>
+                                            <span>x{product.count}</span>
                                         </div>
                                     </div>
                                     <div className="ContadorYPrecio">
-                                        <ItemCount stock={product.product.stock} total={product.product.price} />
+                                        <ItemCount stock={product.product.stock} />
+                                        <span>{product.count * product.product.price}</span>
                                         <MdClose onClick={()=> removeProduct(product.product)} />
                                     </div>
                                 </div>

@@ -168,6 +168,13 @@
     object-fit: cover;
 }
 
+.ProductInCart span {
+    color: black;
+    font-weight: normal;
+    margin-top: -20px;
+    font-size: 14px;
+}
+
 .MdClose {
     color: black;
     opacity: 0;

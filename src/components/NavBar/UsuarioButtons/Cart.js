@@ -3,7 +3,7 @@ import './CartyFavMenu.css';
 import { BsBag } from "react-icons/bs";
 import CartWidget from './CartWidget';
 
-const Cart = (prop, count)=>{
+const Cart = ()=>{
 
     const [showCart, setShowCart] = useState(false);
     
@@ -15,7 +15,7 @@ const Cart = (prop, count)=>{
 
         <div className="CartContainer">
             <BsBag onClick={handleCart} className="Cart" />
-            <CartWidget show={showCart} close={handleCart} prop={prop} count={count} />
+            <CartWidget show={showCart} close={handleCart} />
         </div>
 
     )

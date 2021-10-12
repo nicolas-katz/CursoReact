@@ -24,7 +24,7 @@ const ProductDetails = prop=> {
         IMAGES.img1,
     ]
 
-    const {name, price, link, category, image, description, stock} = prop
+    const {name, price, link, category, description, stock} = prop
 
     return (
         <div className="Contenedor">

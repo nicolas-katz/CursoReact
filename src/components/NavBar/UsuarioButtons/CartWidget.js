@@ -4,17 +4,12 @@ import { IoIosArrowForward } from 'react-icons/io';
 import CartContext from "../../../Context/CartContext";
 import { MdClose } from 'react-icons/md';
 import { Link } from "react-router-dom";
-import ItemCount from "../../ProductDetails/ItemCount";
 import IMAGES from "../../../assets/IMAGES";
 import CustomImage from "../../CustomImage/CustomImage";
 
-const CartWidget = ({show, close, prop, count})=>{
+const CartWidget = ({show, close})=>{
 
-    const {products, removeProduct, addProduct} = useContext(CartContext);
-
-    const handleOnAdd = count => {
-        addProduct(prop, count)
-    }
+    const {products, removeProduct} = useContext(CartContext);
 
     const arrImg = [
         IMAGES.img1,
@@ -36,7 +31,7 @@ const CartWidget = ({show, close, prop, count})=>{
                                     <div className="ProductData">
                                         <h3>{product.product.name}</h3>
                                         <h4>{product.product.price}</h4>
-                                        <ItemCount stock={product.product.stock} onAdd={handleOnAdd} />
+                                        <span>{product.count >= product.product.stock ? product.product.stock : product.count }x{product.product.price}</span>
                                     </div>
                                 </div>
                                 <div>
