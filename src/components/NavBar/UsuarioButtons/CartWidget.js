@@ -46,11 +46,12 @@ const CartWidget = ({show, close})=>{
                             EL CARRITO ESTA VACIO
                         </div> 
                     : 
-                        null
-                    }
-                </div>
-                <div className="IrAlCarrito">
+                    <div className="IrAlCarrito">
+                    <span>Cant. productos: {products.length}</span>
                     <Link to="/cart"><button>VER CARRITO</button></Link>
+                    <Link to="/cart"><button>FINALIZAR COMPRA</button></Link>
+                </div>
+                    }
                 </div>
             </div>
         </div>

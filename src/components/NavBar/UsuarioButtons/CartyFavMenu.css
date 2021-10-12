@@ -175,6 +175,10 @@
     font-size: 14px;
 }
 
+.IrAlCarrito span {
+    color: black;
+}
+
 .MdClose {
     color: black;
     opacity: 0;

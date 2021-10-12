@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './CartyFavMenu.css';
 import { BsBag } from "react-icons/bs";
 import CartWidget from './CartWidget';
+import CartContext from '../../../Context/CartContext';
 
 const Cart = ()=>{
 
@@ -9,7 +10,11 @@ const Cart = ()=>{
     
     const handleCart = ()=>{
         !showCart ? setShowCart(true) : setShowCart(false);
+        products.length < 1 ? setShowCart(false) : setShowCart(true);
+        products.length >= 1 ? setShowCart(true) : setShowCart(false);
     }
+
+    const {products} = useContext(CartContext)
 
     return (
 
