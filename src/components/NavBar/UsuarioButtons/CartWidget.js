@@ -16,7 +16,7 @@ const CartWidget = ({show, close})=>{
     ]
 
     return(
-        <div className={`CartWidget ${show ? 'active' : ''}`}>
+        <div onClick={close} className={`CartWidget ${show ? 'active' : ''}`}>
             <div className="CartMenu">
                 <div className="CartHeader">
                     <IoIosArrowForward onClick={close} className="CloseCart" />

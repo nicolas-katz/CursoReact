@@ -9,9 +9,7 @@ const Cart = ()=>{
     const [showCart, setShowCart] = useState(false);
     
     const handleCart = ()=>{
-        !showCart ? setShowCart(true) : setShowCart(false);
-        products.length < 1 ? setShowCart(false) : setShowCart(true);
-        products.length >= 1 ? setShowCart(true) : setShowCart(false);
+        !showCart && products.length >= 1 ? setShowCart(true) : setShowCart(false);
     }
 
     const {products} = useContext(CartContext)
