@@ -5,6 +5,14 @@
 
 .CartContainer {
     cursor: pointer;
+    position: relative;
+}
+
+.CartContainer label {
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    font-size: 13px;
 }
 
 .CartWidget {

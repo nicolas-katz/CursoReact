@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import './CartyFavMenu.css';
 import { IoIosArrowForward } from 'react-icons/io';
 import CartContext from "../../../Context/CartContext";
@@ -9,7 +9,7 @@ import CustomImage from "../../CustomImage/CustomImage";
 
 const CartWidget = ({show, close})=>{
 
-    const {products, removeProduct} = useContext(CartContext);
+    const {products, removeProduct, price} = useContext(CartContext);
 
     const arrImg = [
         IMAGES.img1,
@@ -48,6 +48,7 @@ const CartWidget = ({show, close})=>{
                     : 
                     <div className="IrAlCarrito">
                     <span>Cant. productos: {products.length}</span>
+                    <span>Subtotal: $ {price}</span>
                     <Link to="/cart"><button>VER CARRITO</button></Link>
                     <Link to="/cart"><button>FINALIZAR COMPRA</button></Link>
                 </div>

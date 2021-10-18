@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 const CartContext = createContext({});
 
@@ -37,13 +37,47 @@ const CartProvider = ({children})=>{
         setProducts([])
     }
 
+    // Subtotal
+    const [price, setPrice] = useState(0)
+
+    useEffect(()=>{
+        setPrice(handleTotalPrice())
+    },[products])
+
+    const handleTotalPriceByItem = () => {
+        let newCartItems = products
+        const test = newCartItems.map(element => {
+          return {
+            ...element,
+            price: element.product.price * element.count
+          }
+        })    
+        return test
+    } 
+
+    const handleTotalPrice = () => {
+        const cartAux = handleTotalPriceByItem()
+        const initialValue = 0
+        return (
+          cartAux &&
+          cartAux.reduce(
+            (accumulator, currentValue) => {          
+              return accumulator + currentValue.price                              
+            },
+            initialValue
+          )    
+        )
+    }
+
     // Enviar context a la aplicación
     const data = {
         products,
         addProduct,
         removeProduct,
         isInCart,
-        clear
+        clear,
+        handleTotalPriceByItem,
+        price
     }
 
     return(

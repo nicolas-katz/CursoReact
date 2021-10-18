@@ -6,7 +6,7 @@ import ProductosEnCarrito from "./ProductosEnCarrito";
 
 const CartContainer = ()=>{
 
-    const {products, clear, removeProduct} = useContext(CartContext);
+    const {products, clear, removeProduct, price} = useContext(CartContext);
 
     const removeCart = (prop)=>{
         removeProduct(prop)
@@ -28,6 +28,7 @@ const CartContainer = ()=>{
                     </div>
                 </div><div className="OrderSummary">
                         <h3>RESUMEN DEL PEDIDO</h3>
+                        <span>{price}</span>
                     </div>
                     <button onClick={()=> clear()}>BORRAR TODOS</button>
                     </>

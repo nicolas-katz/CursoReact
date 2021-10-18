@@ -95,6 +95,11 @@
     height: 40px;
     color: white;
     border-radius: 0;
+    transition: 1s;
+}
+
+.Agregar button:hover {
+    background: rgb(129, 129, 129);
 }
 
 .Agregar .AgregarFav {
@@ -161,6 +166,23 @@
 
 .Pt {
     color: rgb(196, 50, 50);
+}
+
+.AñadirProducto {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 260px;
+    height: 40px;
+    background: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+    display: none;
+    z-index: 12px;
+    font-size: 16px;
+    color: white;
 }
 
 @media only screen and (min-width: 768px) {

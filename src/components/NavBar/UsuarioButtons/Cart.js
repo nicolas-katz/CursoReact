@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './CartyFavMenu.css';
 import { BsBag } from "react-icons/bs";
 import CartWidget from './CartWidget';
@@ -14,10 +14,13 @@ const Cart = ()=>{
 
     const {products} = useContext(CartContext)
 
+    const [suma, setSuma] = useState(0)
+
     return (
 
         <div className="CartContainer">
             <BsBag onClick={handleCart} className="Cart" />
+            <label>{suma}</label>
             <CartWidget show={showCart} close={handleCart} />
         </div>
 

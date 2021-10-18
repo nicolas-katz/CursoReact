@@ -29,7 +29,7 @@ const ProductosEnCarrito = (prop)=>{
             </div>
             <div className="ContadorYPrecio">
                 <ItemCount stock={prop.stock} onAdd={handleOnAdd} />
-                <span>{prop.count <= prop.stock ? prop.count * prop.price : prop.stock * prop.price}</span>
+                <span>{prop.count * prop.price}</span>
                 <MdClose onClick={()=> prop.removeCart(prop)} />
             </div>
         </div>
