@@ -1,24 +1,20 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import { FiHeart } from "react-icons/fi";
+import CartContext from "../../Context/CartContext";
 
 const ItemCount = ({stock, initial = 1, onAdd}) =>{
+
+    const {handleCart} = useContext(CartContext)
+
     const [count, setCount] = useState(initial)
 
     const ApretarButton = ()=>{
         onAdd(count)
-        document.querySelector(".AñadirProducto").style.display="flex";
-        closeToast()
-    }
-
-    const closeToast = ()=>{
-        setTimeout(()=>{
-            document.querySelector(".AñadirProducto").style.display="none";
-        }, 1500)
+        handleCart()
     }
     
     return(
        <>
-       <div className="AñadirProducto">Se ha añadido un producto a tu carrito</div>
         <div className="CantidadProducto">
             <span onClick={() => {count !== initial ? setCount(count - 1) : setCount(initial)}}>-</span>
 			<input value={count >= stock ? stock : count} />

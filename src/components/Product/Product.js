@@ -22,7 +22,7 @@ const Product = prop => {
       <div className="CardProduct">
         <Link to={prop.link}>{arrImg && arrImg.map(image => <CustomImage {...image} />)}</Link>
         <h3>{prop.name}</h3>
-        <p>{prop.price}</p>
+        <p>$ {prop.price}</p>
         <div onClick={openModal} className="VistaPrevia">VISTA PREVIA</div>
         <div onClick={closeModal} className="ModalContainer">
           <div className="ModalProduct">

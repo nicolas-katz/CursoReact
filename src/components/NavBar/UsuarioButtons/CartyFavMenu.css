@@ -10,9 +10,9 @@
 
 .CartContainer label {
     position: absolute;
-    top: 9px;
-    right: 9px;
-    font-size: 13px;
+    top: 8px;
+    right: 7px;
+    font-size: 11px;
 }
 
 .CartWidget {
@@ -85,6 +85,13 @@
     .FavHeader,
     .CartHeader {
         padding: 24px;
+    }
+
+    .CartContainer label {
+        position: absolute;
+        top: 9px;
+        right: 9px;
+        font-size: 13px;
     }
 }
 

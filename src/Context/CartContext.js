@@ -69,6 +69,16 @@ const CartProvider = ({children})=>{
         )
     }
 
+    // Abrir CartView
+    const [showCart, setShowCart] = useState(false);
+    
+    const handleCart = ()=>{
+        !showCart && products.length >= 1 ? setShowCart(true) : setShowCart(false);
+    }
+    
+    // Sumar cantidades en el CartView
+    const [suma, setSuma] = useState(0)
+
     // Enviar context a la aplicación
     const data = {
         products,
@@ -77,7 +87,10 @@ const CartProvider = ({children})=>{
         isInCart,
         clear,
         handleTotalPriceByItem,
-        price
+        price,
+        showCart,
+        handleCart,
+        suma
     }
 
     return(
