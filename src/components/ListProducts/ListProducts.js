@@ -8,18 +8,6 @@ import { collection, getDocs } from 'firebase/firestore';
 const ListProducts = ()=> {
     const [Productos, setProductos] = useState([]);
 
-    // const getProducts = new Promise( resolve=>{
-    //     setTimeout(()=>{
-    //         resolve(ListadoDeProductos)
-    //     }, 1000)
-    // }) 
-
-    // useEffect(()=>{
-    //     getProducts.then( data=>{
-    //         setProductos(data)
-    //     })
-    // }, [])
-
     async function getProducts(db) {
         const productsCol = collection(db, 'ListadoDeProductos');
         const productsSnapshot = await getDocs(productsCol);

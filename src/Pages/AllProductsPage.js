@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import Product from '../components/Product/Product';
-import ListadoDeProductos from '../components/ListadoDeProductos/ListadoDeProductos';
 import './CategoryPage.css';
 import { Link } from 'react-router-dom';
+import db from '../Firebase';
+import { collection, getDocs } from 'firebase/firestore';
 
 const AllProductsPage = ()=>{
     const [Productos, setProductos] = useState([]);
 
-    const getProducts = new Promise( resolve=>{
-        setTimeout(()=>{
-            resolve(ListadoDeProductos)
-        }, 1000)
-    }) 
+    async function getProducts(db) {
+        const productsCol = collection(db, 'ListadoDeProductos');
+        const productsSnapshot = await getDocs(productsCol);
+        const productsList = productsSnapshot.docs.map(doc => doc.data());
+        return setProductos(productsList);
+    }
 
     useEffect(()=>{
-        
-        getProducts.then( data=>{
-            setProductos(data)
-        })
-    }, [])
+        getProducts(db)
+    },[])
 
     return(
         <div className="Contenedor">
