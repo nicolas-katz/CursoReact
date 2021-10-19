@@ -29,7 +29,7 @@ const DetailsContainer = ()=>{
                     return (
                         ProductId === producto.id 
                         ? 
-                        <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} stock={producto.stock} link={`/categories/${producto.categorie}`} category={producto.categorie} />
+                        <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} stock={producto.stock} link={`/categories/${producto.category}`} category={producto.category} />
                         : 
                         null
                     )

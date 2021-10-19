@@ -3,10 +3,11 @@ import './CartContainer.css'
 import CartContext from "../../Context/CartContext";
 import { Link } from "react-router-dom";
 import ProductosEnCarrito from "./ProductosEnCarrito";
+import {BsLock} from 'react-icons/bs'
 
 const CartContainer = ()=>{
 
-    const {products, clear, removeProduct, price} = useContext(CartContext);
+    const {products, removeProduct, price} = useContext(CartContext);
 
     const removeCart = (prop)=>{
         removeProduct(prop)
@@ -16,8 +17,10 @@ const CartContainer = ()=>{
         <div className="Carrito">
             {products.length < 1 
             ? 
-            <div>NO HAY PRODUCTOS <div><Link to="/products">SEGUIR COMPRANDO</Link></div></div>
-            : <><div className="CarritoProductos">
+            <div className="SeguirComprando">EL CARRITO ESTÁ VACÍO <div><Link to="/products">SEGUIR COMPRANDO</Link></div></div>
+            : 
+            <>
+                <div className="CarritoProductos">
                     <h3>MI CARRITO</h3>
                     <div className="CarritoProducto">
                         {products.map((product) => {
@@ -26,12 +29,25 @@ const CartContainer = ()=>{
                             );
                         })}
                     </div>
-                </div><div className="OrderSummary">
-                        <h3>RESUMEN DEL PEDIDO</h3>
-                        <span>{price}</span>
+                </div>
+                <div className="OrderSummary">
+                    <h3>RESUMEN DEL PEDIDO</h3>
+                    <div>
+                        <h4>SUBTOTAL</h4>
+                        <span>${price}</span>
                     </div>
-                    <button onClick={()=> clear()}>BORRAR TODOS</button>
-                    </>
+                    <div>
+                        <h4>ENVIO</h4>
+                        <span>$500</span>
+                    </div>
+                    <div className="TotalPrice">
+                        <h4>TOTAL</h4>
+                        <span>${price + 500}</span>
+                    </div>
+                    <h5>IMPUESTO INCLUIDO</h5>
+                    <button> <BsLock /> FINALIZAR COMPRA</button>
+                </div>
+            </>
             }
         </div>
     )

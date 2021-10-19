@@ -35,7 +35,6 @@
     right: 0;
 }
 
-.FavMenu,
 .CartMenu { 
     height: 100vh;
     position: fixed;
@@ -44,20 +43,18 @@
     box-shadow: 1px 2px 10px rgba(0,0,0,0.3);
     top: 0;
     right: -400px;
-    width: 180px;
+    width: 100%;
     transition: .7s;
     z-index: 13;
 }
 
-.FavHeader,
 .CartHeader {
     display: flex;
     align-items: center;
-    padding: 16px;
+    padding: 10px;
     background: black;
 }
 
-.FavHeader h1,
 .CartHeader h1 {
     font-size: 18px;
     color: white;
@@ -66,10 +63,15 @@
     text-transform: uppercase;
 }
 
-.CloseFav,
 .CloseCart {
     color: white;
     font-size: 18px;
+}
+
+@media only screen and (min-width: 425px) {
+    .CartMenu { 
+        width: 60%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -77,12 +79,10 @@
         margin: 0 20px;
     }
     
-    .FavMenu,
     .CartMenu { 
         width: 280px;
     }
 
-    .FavHeader,
     .CartHeader {
         padding: 24px;
     }
@@ -96,51 +96,46 @@
 }
 
 @media only screen and (min-width: 992px) {
-    .FavMenu,
     .CartMenu { 
         width: 320px;
     }
 
-    .FavHeader,
     .CartHeader {
         padding: 16px;
     }
 
-    .FavHeader h1,
     .CartHeader h1 {
         font-size: 24px;
     }
 
-    .CloseFav,
     .CloseCart {
         font-size: 24px;
     }
 }
 
-.CartProducts .Agregar {
-    display: none;
-}
+/* Dentro del CartWidget */
 
 .CartProducts {
-    margin: 20px;
-    height: 68vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 84%;
+}
+
+.CartProductsContainer {
+    margin: 10px;
+    height: 300px;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
-.CartProducts::-webkit-scrollbar {
-    width: 4px;
-}
-
-.CartProducts::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background: rgb(216, 216, 216);
+.CartProductsContainer::-webkit-scrollbar {
+    width: 0;
 }
 
 .ProductInCart {
-    height: 100px;
+    height: 80px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid rgba(0, 0, 0, 0.082);
     padding-bottom: 10px;
@@ -151,68 +146,51 @@
     border: none;
 }
 
-.ProductInCart div {
+.ProductDataContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.ProductInCart div .ProductData {
+.ProductDataContainer img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+.ProductData {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     margin-left: 12px;
+    color: black;
+    height: 80px;
 }
 
-.ProductInCart div h3 {
-    font-size: 15px;
+.ProductData h3 {
+    font-size: 16px;
     color: black;
     font-weight: normal;
 }
 
-.ProductInCart div h4 {
-    font-size: 13px;
-    color: grey;
-    font-weight: normal;
-    margin-top: -14px;
-}
-
-.ProductInCart img {
-    height: 84px;
-    width: 84px;
-    object-fit: cover;
-}
-
-.ProductInCart span {
+.ProductData h4 {
     color: black;
-    font-weight: normal;
-    margin-top: -20px;
     font-size: 14px;
+    font-weight: normal;
+    margin-top: -10px;
 }
 
-.IrAlCarrito span {
-    color: black;
-}
-
-.MdClose {
-    color: black;
-    opacity: 0;
-}
-
-.ProductInCart:hover .MdClose {
-    opacity: 1;
-}
-
-.NoHayProductos {
-    color: black;
-    margin-left: 15%;
-    margin-top: 20px;
+.removeIcon {
+    color: gray;
+    transition: .5s;
+    margin-bottom: 10px;
 }
 
 .IrAlCarrito {
-    bottom: 10px;
-    position: relative;
-    margin: 0 20px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .IrAlCarrito a button {
@@ -224,24 +202,34 @@
     font-size: 20px;
     border: none;
     border-radius: 0;
+    margin-top: 12px;
 }
 
-.ProductData .CantidadProducto {
-    margin-top: -4px;
-    font-weight: normal;
-    height: 26px;
-}
-
-.ProductData .CantidadProducto input {
-    width: 28px;
-}
-
-.ProductData .CantidadProducto span {
+.IrAlCarrito span {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
     font-weight: normal;
     color: black;
-    font-size: 16px;
 }
 
-.ProductData .totalPrice {
-    display: none;
+.NoHayProductos {
+    color: black;
+    margin: 0 auto;
+    margin-top: -260px;
+    height: 100vh;
+}
+
+@media only screen and (min-width: 768px) {
+    .CartProducts {
+        height: 82%;
+    }
+
+    .CartProductsContainer {
+        margin: 20px;
+    }
+
+    .IrAlCarrito {
+        margin: 0 20px;
+    }
 }

@@ -1,6 +1,7 @@
 .Carrito {
-    margin: 160px 0;
+    margin: 100px 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -10,13 +11,12 @@
 }
 
 .Carrito .CarritoProductos {
-    width: 600px;
-    margin-right: 20px;
+    width: 100%;
 }
 
 .CarritoProductos .ProductoEnCarrito {
     border-bottom: 1px solid rgba(0, 0, 0, 0.200);
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -40,12 +40,118 @@
 }
 
 .CarritoProductos .ProductoEnCarrito img {
-    width: 90px;
-    height: 110px;
+    width: 100px;
+    height: 130px;
     object-fit: cover;
 }
 
-.Carrito .OrderSummary {
-    width: 300px;
+.ProductosDatos h3 {
+    margin-top: -6px;
 }
 
+.ProductosDatos h4 {
+    margin-top: -16px;
+    font-weight: normal;
+}
+
+.ProductosDatos span {
+    margin-top: -20px;
+}
+
+.ContadorYPrecio {
+    font-size: 20px;
+    color: gray;
+}
+
+.Carrito .OrderSummary {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.OrderSummary h3 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.200);
+    padding-bottom: 20px;
+}
+
+.OrderSummary div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+
+.OrderSummary div h4 {
+    font-weight: normal;
+}
+
+.OrderSummary h5 {
+    margin-top: -20px;
+    font-weight: normal;
+    color: gray;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.200);
+}
+
+.OrderSummary button {
+    background: black;
+    color: white;
+    text-decoration: none;
+    height: 44px;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    margin-top: 12px;
+    transition: .5s;
+}
+
+.OrderSummary button:hover {
+    background: rgb(129, 129, 129);
+}
+
+.OrderSummary .TotalPrice {
+    margin-top: -10px;
+}
+
+.Carrito .SeguirComprando {
+    color: black;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.Carrito .SeguirComprando a {
+    color: gray;
+    font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+    .Carrito {
+        margin: 160px 20px;
+        flex-direction: row;
+    }
+    
+    .Carrito .CarritoProductos {
+        width: 400px;
+        margin-right: 20px;
+    }
+    
+    .Carrito .OrderSummary {
+        width: 200px;
+        margin-left: 60px;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .Carrito {
+        margin: 160px 0;
+    }
+    
+    .Carrito .CarritoProductos {
+        width: 560px;
+    }
+
+    .Carrito .OrderSummary {
+        width: 260px;
+    }
+}

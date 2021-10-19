@@ -22,17 +22,17 @@ const CategoryPage = ()=>{
         })
     }, [catId])
 
-    const ProductCategorie = catId;
+    const ProductCategory = catId;
 
     return(
         <div className="Contenedor">
             <div className="Pagination">
-                <Link to="/">Inicio</Link> / <Link to="/products">PRODUCTOS</Link> / <span>{ProductCategorie}</span>
+                <Link to="/">Inicio</Link> / <Link to="/products">PRODUCTOS</Link> / <span>{ProductCategory}</span>
             </div>
             <div className="CategoriasContainer">
                 {Productos.map((producto)=>{
                     return (
-                        ProductCategorie === producto.categorie ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} />  : null
+                        ProductCategory === producto.category ? <Product key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} link={`/products/${producto.id}`} />  : null
                     )
                 })}
                 {Productos.length !== 0 ? null : <div className="CargandoProductos">Cargando productos...</div>}

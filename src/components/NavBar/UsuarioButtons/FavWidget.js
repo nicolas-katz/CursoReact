@@ -1,5 +1,5 @@
 import React from "react";
-import './CartyFavMenu.css';
+import './Cart.css';
 import { IoIosArrowForward } from 'react-icons/io';
 
 const FavWidget = ({show, close})=>{

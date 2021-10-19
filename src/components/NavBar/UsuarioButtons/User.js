@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 
 const User = ()=>{
 
-    const OpenUser = ()=>{
-        document.querySelector(".DropdownUser").classList.toggle("active");
-    }
+    // const OpenUser = ()=>{
+    //     document.querySelector(".DropdownUser").classList.toggle("active");
+    // }
 
     return (
 
         <div className="UserContainer">
-            <AiOutlineUser onClick={OpenUser} className="User" />
+            <AiOutlineUser className="User" />
             <div className="DropdownUser">
                 <Link to="/login">Log in</Link>
                 <Link to="/signin">Sign in</Link>

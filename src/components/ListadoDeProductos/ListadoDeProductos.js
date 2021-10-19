@@ -6,7 +6,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 3,
@@ -24,7 +24,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 4,
@@ -33,7 +33,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 6,
@@ -51,7 +51,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 7,
@@ -60,7 +60,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 10,
@@ -87,7 +87,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 12,
@@ -105,7 +105,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 13,
@@ -114,7 +114,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 14,
@@ -123,7 +123,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 15,
@@ -132,7 +132,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 16,
@@ -141,7 +141,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 17,
@@ -150,7 +150,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 18,
@@ -159,7 +159,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "celulares"
+        category: "celulares"
     },
     {
         id: 19,
@@ -168,7 +168,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 20,
@@ -177,7 +177,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 21,
@@ -186,7 +186,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 22,
@@ -195,7 +195,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 23,
@@ -204,7 +204,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 24,
@@ -213,7 +213,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "Yes",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 25,
@@ -222,7 +222,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 26,
@@ -231,7 +231,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 27,
@@ -240,7 +240,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 28,
@@ -249,7 +249,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 29,
@@ -258,7 +258,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 30,
@@ -267,7 +267,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 31,
@@ -276,7 +276,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 32,
@@ -285,7 +285,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "tablets"
+        category: "tablets"
     },
     {
         id: 33,
@@ -294,7 +294,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "laptops"
+        category: "laptops"
     },
     {
         id: 34,
@@ -303,7 +303,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "laptops"
+        category: "laptops"
     },
     {
         id: 35,
@@ -312,7 +312,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "laptops"
+        category: "laptops"
     },
     {
         id: 36,
@@ -321,7 +321,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "laptops"
+        category: "laptops"
     },
     {
         id: 37,
@@ -330,7 +330,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "laptops"
+        category: "laptops"
     },
     {
         id: 38,
@@ -339,7 +339,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "laptops"
+        category: "laptops"
     },
     {
         id: 39,
@@ -348,7 +348,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "laptops"
+        category: "laptops"
     },
     {
         id: 40,
@@ -357,7 +357,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "relojes"
+        category: "relojes"
     },
     {
         id: 41,
@@ -366,7 +366,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "relojes"
+        category: "relojes"
     },
     {
         id: 42,
@@ -375,7 +375,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "relojes"
+        category: "relojes"
     },
     {
         id: 43,
@@ -384,7 +384,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "relojes"
+        category: "relojes"
     },
     {
         id: 44,
@@ -393,7 +393,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "relojes"
+        category: "relojes"
     },
     {
         id: 45,
@@ -402,7 +402,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "relojes"
+        category: "relojes"
     },
     {
         id: 46,
@@ -411,7 +411,7 @@ const ListadoDeProductos = [
         price: 100000,
         stock: 10,
         homePage: "No",
-        categorie: "relojes"
+        category: "relojes"
     },
 ]
 

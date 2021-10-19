@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './CartyFavMenu.css';
+import './Cart.css';
 import { FiHeart } from "react-icons/fi";
-import FavWidget from './FavWidget';
 
 const Fav = ()=>{
 
@@ -15,7 +14,6 @@ const Fav = ()=>{
 
         <div className="FavContainer">
             <FiHeart onClick={handleFav} className="Fav" />
-            <FavWidget show={showFav} close={handleFav} />
         </div>
 
     )

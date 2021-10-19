@@ -73,7 +73,7 @@ const CartProvider = ({children})=>{
     const [showCart, setShowCart] = useState(false);
     
     const handleCart = ()=>{
-        !showCart && products.length >= 1 ? setShowCart(true) : setShowCart(false);
+        !showCart ? setShowCart(true) : setShowCart(false);
     }
     
     // Sumar cantidades en el CartView

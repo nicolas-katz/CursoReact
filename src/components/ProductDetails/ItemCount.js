@@ -11,6 +11,7 @@ const ItemCount = ({stock, initial = 1, onAdd}) =>{
     const ApretarButton = ()=>{
         onAdd(count)
         handleCart()
+        setCount(initial)
     }
     
     return(
@@ -21,7 +22,7 @@ const ItemCount = ({stock, initial = 1, onAdd}) =>{
 			<span onClick={() =>{count !== stock ? setCount(count + 1) : setCount(stock)}}>+</span>
         </div>
         <div className="Agregar">
-        <button onClick={ApretarButton}>AGREGAR AL CARRITO</button>
+            <button onClick={ApretarButton}>AGREGAR AL CARRITO</button>
             <FiHeart className="AgregarFav" />
         </div>
        </>

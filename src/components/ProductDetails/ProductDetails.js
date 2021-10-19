@@ -37,7 +37,7 @@ const ProductDetails = prop=> {
                         <Link to="/">Inicio</Link> / <Link to="/products">Productos</Link> / <Link to={link}>{category}</Link> / <span>{name}</span>
                     </div>
                     <h3>{name}</h3>
-                    <h4>$ {price}</h4>
+                    <h4>${price}</h4>
                     <h5>COLORES</h5>
                     <select>
                         <option className="Elegir">ELEGIR</option>
