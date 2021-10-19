@@ -25,7 +25,7 @@ const CartContainer = ()=>{
                     <div className="CarritoProducto">
                         {products.map((product) => {
                             return (
-                               <ProductosEnCarrito stock={product.product.stock} name={product.product.name} price={product.product.price} count={product.count} removeCart={removeCart}/>
+                               <ProductosEnCarrito stock={product.product.stock} name={product.product.name} price={product.product.price} count={product.count} removeCart={removeCart} id={product.product.id}/>
                             );
                         })}
                     </div>
@@ -38,11 +38,11 @@ const CartContainer = ()=>{
                     </div>
                     <div>
                         <h4>ENVIO</h4>
-                        <span>$500</span>
+                        <span>GRATIS</span>
                     </div>
                     <div className="TotalPrice">
                         <h4>TOTAL</h4>
-                        <span>${price + 500}</span>
+                        <span>${price}</span>
                     </div>
                     <h5>IMPUESTO INCLUIDO</h5>
                     <button> <BsLock /> FINALIZAR COMPRA</button>

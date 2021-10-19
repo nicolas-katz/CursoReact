@@ -32,11 +32,6 @@ const CartProvider = ({children})=>{
         }
     }
 
-    // Borro todos los productos
-    const clear = () => {
-        setProducts([])
-    }
-
     // Subtotal
     const [price, setPrice] = useState(0)
 
@@ -75,9 +70,11 @@ const CartProvider = ({children})=>{
     const handleCart = ()=>{
         !showCart ? setShowCart(true) : setShowCart(false);
     }
-    
-    // Sumar cantidades en el CartView
-    const [suma, setSuma] = useState(0)
+
+    // Cartcount
+    const changeCount = (counter)=>{
+        
+    }
 
     // Enviar context a la aplicación
     const data = {
@@ -85,12 +82,11 @@ const CartProvider = ({children})=>{
         addProduct,
         removeProduct,
         isInCart,
-        clear,
         handleTotalPriceByItem,
         price,
         showCart,
         handleCart,
-        suma
+        changeCount
     }
 
     return(

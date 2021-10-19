@@ -7,6 +7,7 @@ import ItemCount from './ItemCount'
 import CartContext from '../../Context/CartContext';
 import IMAGES from '../../assets/IMAGES';
 import CustomImage from '../CustomImage/CustomImage';
+import {RiArrowLeftSLine, RiArrowRightSLine} from 'react-icons/ri'
 
 const ProductDetails = prop=> {
 
@@ -24,10 +25,16 @@ const ProductDetails = prop=> {
         IMAGES.img1,
     ]
 
-    const {name, price, link, category, description, stock} = prop
+    const {name, price, link, category, description, stock, id} = prop
 
     return (
         <div className="Contenedor">
+            <div className="ProductsPagination">
+                <RiArrowLeftSLine className="ArrIcons" />
+                {id === 1 ? <Link className="DisableLink" to={`/products/${id}`}>Anterior</Link> : <Link to={`/products/${id - 1}`}>Anterior</Link>} |
+                {id === 46 ? <Link className="DisableLink" to={`/products/${id}`}>Siguiente</Link> : <Link to={`/products/${id + 1}`}>Siguiente</Link>}
+                <RiArrowRightSLine className="ArrIcons" />
+            </div>
             <div className="DetalleDeProducto">
                 <div className="ImagenDelProducto">
                     {arrImg && arrImg.map(image => <CustomImage {...image} />)}

@@ -31,10 +31,6 @@
     visibility: visible;
 }
 
-.CartWidget.active .CartMenu {
-    right: 0;
-}
-
 .CartMenu { 
     height: 100vh;
     position: fixed;
@@ -46,6 +42,10 @@
     width: 100%;
     transition: .7s;
     z-index: 13;
+}
+
+.CartWidget.active .CartMenu {
+    right: 0;
 }
 
 .CartHeader {
@@ -70,7 +70,7 @@
 
 @media only screen and (min-width: 425px) {
     .CartMenu { 
-        width: 60%;
+        width: 70%;
     }
 }
 

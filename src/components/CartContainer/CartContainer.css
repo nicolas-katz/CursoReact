@@ -155,3 +155,38 @@
         width: 260px;
     }
 }
+
+/* CartCount */
+
+.CartCount {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 10px;
+    height: 30px;
+    width: max-content;
+    border: 1px solid black;
+}
+
+.CartCount input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.CartCount span:first-child {
+    margin-top: -2px;
+}
+
+@media only screen and (max-width: 479px) {
+    .ProductoEnCarrito {
+        position: relative;
+    }
+
+    .CartCountContainer {
+        position: absolute;
+        top: 120px;
+        left: 120px;
+    }
+}

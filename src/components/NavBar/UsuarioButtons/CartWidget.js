@@ -10,14 +10,14 @@ import { BsLock, BsBag } from "react-icons/bs";
 
 const CartWidget = ({show, close})=>{
 
-    const {products, removeProduct, price} = useContext(CartContext);
+    const {products, removeProduct, price, handleCart} = useContext(CartContext);
 
     const arrImg = [
         IMAGES.img1,
     ]
 
     return(
-        <div className={`CartWidget ${show ? 'active' : ''}`}>
+        <div onClick={handleCart} className={`CartWidget ${show ? 'active' : ''}`}>
             <div className="CartMenu">
                 <div className="CartHeader">
                     <IoIosArrowForward onClick={close} className="CloseCart" />
@@ -29,7 +29,7 @@ const CartWidget = ({show, close})=>{
                             return(
                                 <div className="ProductInCart">
                                     <div className="ProductDataContainer">
-                                        {arrImg && arrImg.map(image => <CustomImage {...image} />)}
+                                        {arrImg && arrImg.map(image => <Link to={`/products/${product.product.id}`}><CustomImage {...image} /></Link>)}
                                         <div className="ProductData">
                                             <h3>{product.product.name}</h3>
                                             <h4>${product.product.price}</h4>
@@ -50,9 +50,9 @@ const CartWidget = ({show, close})=>{
                         </div> 
                     : 
                         <div className="IrAlCarrito">
-                        <span>SUBTOTAL: ${price}</span>
-                        <Link to="/cart"><button><BsBag /> VER CARRITO</button></Link>
-                        <Link to="/cart"><button><BsLock /> FINALIZAR COMPRA</button></Link>
+                            <span>SUBTOTAL: ${price}</span>
+                            <Link to="/cart"><button onClick={handleCart}><BsBag /> VER CARRITO</button></Link>
+                            <Link to="/cart"><button onClick={handleCart}><BsLock /> FINALIZAR COMPRA</button></Link>
                         </div>
                     }
                 </div>
