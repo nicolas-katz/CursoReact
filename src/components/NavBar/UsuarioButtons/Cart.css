@@ -15,6 +15,11 @@
     font-size: 11px;
 }
 
+.CartContainer label.active {
+    font-size: 10.5px;
+    right: 5.5px;
+}
+
 .CartWidget {
    position: fixed;
    background: rgba(0, 0, 0, 0.301);
@@ -93,6 +98,12 @@
         top: 9px;
         right: 9px;
         font-size: 13px;
+    }
+
+    .CartContainer label.active {
+        font-size: 12.5px;
+        top: 9.5px;
+        right: 7px;
     }
 }
 

@@ -6,7 +6,23 @@ import CartContext from '../../../Context/CartContext';
 
 const Cart = ()=>{
 
-    const {handleCart, showCart, suma} = useContext(CartContext)
+    const {handleCart, showCart, products} = useContext(CartContext)
+
+    let cantProductos = products.map(product=>product.count)
+
+    let suma = null
+
+    if(cantProductos.length >= 1)  {
+        suma = cantProductos.reduce((acumulador, numero) => acumulador + numero);
+    } else {
+        suma = 0
+    }
+
+    if(suma > 9) {
+        document.querySelector("label").classList.add("active")
+    } else {
+        document.querySelector("label").classList.remove("active")
+    }
 
     return (
 

@@ -89,9 +89,6 @@ const CartProvider = ({children})=>{
         } 
       }
 
-    // Sumar cantidad de productos al NavBar Cart
-    const [suma, setSuma] = useState(0)
-
     // Enviar context a la aplicación
     const data = {
         products,
@@ -102,8 +99,7 @@ const CartProvider = ({children})=>{
         price,
         showCart,
         handleCart,
-        removeOneProduct,
-        suma
+        removeOneProduct
     }
 
     return(
