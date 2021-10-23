@@ -16,7 +16,8 @@ const CartProvider = ({children})=>{
         let cartAux = []
         if(isInCart(product)){
             cartElement = products.find(element => element.product.name === product.name)
-            cartElement.count = cartElement.count + count
+            cartElement.count = cartElement.count >= cartElement.product.stock ? cartElement.product.stock : cartElement.count + count
+            if (cartElement.count > cartElement.product.stock) {cartElement.count = cartElement.product.stock}
             cartAux = [...products]
         } else{
             cartAux = [cartElement, ...products]
@@ -71,10 +72,25 @@ const CartProvider = ({children})=>{
         !showCart ? setShowCart(true) : setShowCart(false);
     }
 
-    // Cartcount
-    const changeCount = (counter)=>{
-        
-    }
+    // Remuevo elementos del carrito
+    const removeOneProduct = product => {
+        if (isInCart(product)) {
+          let cartElement = products.find(element => element.product.name === product.name)
+          if (cartElement.count !== 1) {
+            let cart = products
+            cart.map(element => {
+              if (element.product.name === product.name) {
+                element.count = element.count - 1
+              }
+              return element
+            })
+            setProducts([...cart])
+          }
+        } 
+      }
+
+    // Sumar cantidad de productos al NavBar Cart
+    const [suma, setSuma] = useState(0)
 
     // Enviar context a la aplicación
     const data = {
@@ -86,7 +102,8 @@ const CartProvider = ({children})=>{
         price,
         showCart,
         handleCart,
-        changeCount
+        removeOneProduct,
+        suma
     }
 
     return(

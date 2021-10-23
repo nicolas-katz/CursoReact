@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import './Cart.css';
 import { IoIosArrowForward } from 'react-icons/io';
 import CartContext from "../../../Context/CartContext";
@@ -17,7 +17,7 @@ const CartWidget = ({show, close})=>{
     ]
 
     return(
-        <div onClick={handleCart} className={`CartWidget ${show ? 'active' : ''}`}>
+        <div className={`CartWidget ${show ? 'active' : ''}`}>
             <div className="CartMenu">
                 <div className="CartHeader">
                     <IoIosArrowForward onClick={close} className="CloseCart" />

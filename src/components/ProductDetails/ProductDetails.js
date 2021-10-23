@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import './ProductDetails.css';
-import { FiMinus, FiHeart } from 'react-icons/fi'
+import { FiMinus } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 import { FaPinterestP, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import ItemCount from './ItemCount'
@@ -16,16 +16,16 @@ const ProductDetails = prop=> {
     }
 
     const {addProduct} = useContext(CartContext)
-
-    const handleOnAdd = count => {
-        addProduct(prop, count)
-    }
     
     const arrImg = [
         IMAGES.img1,
     ]
 
     const {name, price, link, category, description, stock, id} = prop
+
+    const handleOnAdd = count => {
+        addProduct(prop, count)
+    }
 
     return (
         <div className="Contenedor">

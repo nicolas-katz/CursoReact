@@ -63,9 +63,15 @@
     color: gray;
 }
 
+.Carrito .OrderSummaryContainer {
+    position: relative;
+}
+
 .Carrito .OrderSummary {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 50px;
+    position: sticky;
+    top: 120px;
 }
 
 .OrderSummary h3 {
@@ -158,35 +164,55 @@
 
 /* CartCount */
 
-.CartCount {
+.ProductoEnCarrito {
+    position: relative;
+}
+
+.ProductoEnCarrito .Agregar {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.addOne,
+.removeOne {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    padding: 0 10px;
-    height: 30px;
-    width: max-content;
-    border: 1px solid black;
+    position: relative;
 }
 
-.CartCount input {
-    width: 50px;
-    text-align: center;
-    border: none;
-    outline: none;
+.addOne .CartCount,
+.removeOne .CartCount {
+    position: absolute;
+    opacity: 0;
 }
 
-.CartCount span:first-child {
-    margin-top: -2px;
+.addOne span {
+    margin-top: 2px !important;
 }
 
-@media only screen and (max-width: 479px) {
-    .ProductoEnCarrito {
+.ProductoEnCarrito .CantidadProducto {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    position: absolute;
+    bottom: -4px;
+    left: 120px;
+}
+
+.ProductoEnCarrito .CantidadProducto input {
+    display: none;
+}
+
+.ProductoEnCarrito .CantidadProducto h4 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+@media only screen and (min-width: 540px) {
+    .ProductoEnCarrito .CantidadProducto {
         position: relative;
-    }
-
-    .CartCountContainer {
-        position: absolute;
-        top: 120px;
-        left: 120px;
+        top: -32px;
+        left: 0;
     }
 }

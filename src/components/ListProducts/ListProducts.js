@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Product from '../Product/Product';
 import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos'
 import { Link } from 'react-router-dom';
-// import db from '../../Firebase';
+// import db from '../../firebase';
 // import { collection, getDocs } from 'firebase/firestore';
 
 const ListProducts = ()=> {

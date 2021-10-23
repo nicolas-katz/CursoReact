@@ -113,6 +113,10 @@
     background: rgb(194, 194, 194);
 }
 
+.InfoDelProducto .CartCount {
+    display: none !important;
+}
+
 .Descripcion {
     margin-top: 30px;
 }

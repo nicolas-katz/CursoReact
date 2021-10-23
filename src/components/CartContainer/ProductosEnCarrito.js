@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import CustomImage from "../CustomImage/CustomImage";
 import IMAGES from "../../assets/IMAGES";
 import { IoCloseCircleOutline } from 'react-icons/io5';
 import { Link } from "react-router-dom";
-import CartCount from "./CartCount";
+import ItemCount from '../ProductDetails/ItemCount'
 import CartContext from "../../Context/CartContext";
 
 const ProductosEnCarrito = (prop)=>{
@@ -12,7 +12,15 @@ const ProductosEnCarrito = (prop)=>{
         IMAGES.img1,
     ]
 
-    const {changeCount} = useContext(CartContext)
+    const {addProduct, removeOneProduct} = useContext(CartContext)
+
+    const handleOnAdd = count => {
+        addProduct(prop, count)
+    }
+
+    const handleOnRemove = count => {
+        removeOneProduct(prop, count)
+    }
 
     return(
         <div className="ProductoEnCarrito">
@@ -21,12 +29,9 @@ const ProductosEnCarrito = (prop)=>{
                 <div className="ProductosDatos">
                     <h3>{prop.name}</h3>
                     <h4>${prop.price}</h4>
-                    <span>x{prop.count}</span>
                 </div>
             </div>
-            <div className="CartCountContainer">
-                <CartCount count={prop.count} stock={prop.stock} changeCount={changeCount} />
-            </div>
+            <ItemCount stock={prop.stock} onAdd={handleOnAdd} onRemove={handleOnRemove} input={prop.count} />
             <div className="ContadorYPrecio">
                 <IoCloseCircleOutline onClick={()=> prop.removeCart(prop)} />
             </div>
