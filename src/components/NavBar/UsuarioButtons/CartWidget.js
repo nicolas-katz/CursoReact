@@ -29,7 +29,7 @@ const CartWidget = ({show, close})=>{
                             return(
                                 <div className="ProductInCart">
                                     <div className="ProductDataContainer">
-                                        {arrImg && arrImg.map(image => <Link to={`/products/${product.product.id}`}><CustomImage {...image} /></Link>)}
+                                        {arrImg && arrImg.map(image => <Link to={`/products/${product.product.id}`} onClick={handleCart}><CustomImage {...image} /></Link>)}
                                         <div className="ProductData">
                                             <h3>{product.product.name}</h3>
                                             <h4>${product.product.price}</h4>
@@ -52,7 +52,7 @@ const CartWidget = ({show, close})=>{
                         <div className="IrAlCarrito">
                             <span>SUBTOTAL: ${price}</span>
                             <Link to="/cart"><button onClick={handleCart}><BsBag /> VER CARRITO</button></Link>
-                            <Link to="/cart"><button onClick={handleCart}><BsLock /> FINALIZAR COMPRA</button></Link>
+                            <Link to="/endPurchase"><button onClick={handleCart}><BsLock /> FINALIZAR COMPRA</button></Link>
                         </div>
                     }
                 </div>

@@ -46,7 +46,7 @@ const CartContainer = ()=>{
                             <span>${price}</span>
                         </div>
                         <h5>IMPUESTO INCLUIDO</h5>
-                        <button> <BsLock /> FINALIZAR COMPRA</button>
+                        <Link to="/endPurchase"><button><BsLock /> FINALIZAR COMPRA</button></Link>
                     </div>
                 </div>
             </>

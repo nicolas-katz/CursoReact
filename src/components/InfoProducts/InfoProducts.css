@@ -1,0 +1,35 @@
+.ProductOfCart {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.ProductOfCart:last-child {
+    margin-bottom: 0;
+}
+
+.ProductOfCart img {
+    width: 90px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.ProductInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -30px;
+}
+
+.ProductInfo div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ProductInfo h4 {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.ProductInfo div h4:last-child {
+    margin-top: -20px;
+}

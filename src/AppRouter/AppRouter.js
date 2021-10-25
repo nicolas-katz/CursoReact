@@ -8,12 +8,15 @@ import AllProductsPage from '../Pages/AllProductsPage';
 import NavBar from '../components/NavBar/NavBar';
 import Footer from '../components/Footer/Footer';
 import CartPage from '../Pages/CartPage';
+import EndPurchase from '../Pages/EndPurchase';
 
 const AppRouter = ()=>{
     return (
         <BrowserRouter>
             <NavBar />
             <Switch>
+                
+                <Route path="/endPurchase" component={EndPurchase} />
                 <Route path="/cart" component={CartPage} />
                 <Route path="/categories/:catId" component={CategoryPage} />
                 <Route exact path="/products" component={AllProductsPage} />

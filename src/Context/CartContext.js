@@ -87,7 +87,12 @@ const CartProvider = ({children})=>{
             setProducts([...cart])
           }
         } 
-      }
+    }
+
+    // Vaciar carrito
+    const clear = ()=>{
+      setProducts([])
+    }
 
     // Enviar context a la aplicación
     const data = {
@@ -99,7 +104,8 @@ const CartProvider = ({children})=>{
         price,
         showCart,
         handleCart,
-        removeOneProduct
+        removeOneProduct,
+        clear
     }
 
     return(

@@ -14,14 +14,13 @@ const Cart = ()=>{
 
     if(cantProductos.length >= 1)  {
         suma = cantProductos.reduce((acumulador, numero) => acumulador + numero);
+        if(suma > 9) {
+            document.querySelector("label").classList.add("active")
+        } else {
+            document.querySelector("label").classList.remove("active")
+        }
     } else {
         suma = 0
-    }
-
-    if(suma > 9) {
-        document.querySelector("label").classList.add("active")
-    } else {
-        document.querySelector("label").classList.remove("active")
     }
 
     return (

@@ -10,8 +10,8 @@ const ItemCount = ({stock, initial = 1, onAdd, onRemove, input}) =>{
 
     const ApretarButton = ()=>{
         onAdd(count)
-        handleCart()
         setCount(initial)
+        handleCart()
     }
 
     const addCartCount = ()=>{
