@@ -23,7 +23,7 @@ const ListProducts = ()=> {
     }, [])
 
     // async function getProducts(db) {
-    //     const productsCol = collection(db, 'ListadoDeProductos');
+    //     const productsCol = collection(db, 'products');
     //     const productsSnapshot = await getDocs(productsCol);
     //     const productsList = productsSnapshot.docs.map(doc => doc.data());
     //     return setProductos(productsList);
@@ -44,7 +44,7 @@ const ListProducts = ()=> {
             <div className="CardsContainer">
                 {Productos.map((producto)=>{
                     return (
-                        producto.homePage === "Yes" ? <Product key={producto.id} name={producto.name} price={producto.price}  link={`/products/${producto.id}`} /> : null
+                        <Product key={producto.id} name={producto.name} price={producto.price}  link={`/products/${producto.id}`} />
                     )
                 })}
                 {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}

@@ -1,0 +1,17 @@
+{
+  "firestore": {
+    "rules": "rules_version = '2';",
+    "indexes": "--only firestore:indexes"
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  }
+}
