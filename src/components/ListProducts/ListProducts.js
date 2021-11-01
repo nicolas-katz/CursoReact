@@ -1,7 +1,7 @@
 import './ListProducts.css';
 import React, { useEffect, useState } from 'react'
 import Product from '../Product/Product';
-import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos'
+// import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos'
 import { Link } from 'react-router-dom';
 import db from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
