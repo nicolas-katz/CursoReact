@@ -1,50 +1,35 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductDetails from '../ProductDetails/ProductDetails';
 import './DetailsContainer.css';
-// import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos'
 import { useParams } from 'react-router';
-import db from '../../Firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import db from '../../firebase';
+import { getDoc, doc } from 'firebase/firestore';
 
 const DetailsContainer = ()=>{
     
     const {productId} = useParams()
     const [Productos, setProductos] = useState([]);
 
-    // const getProducts = new Promise( resolve=>{
-    //     setTimeout(()=>{
-    //         resolve(ListadoDeProductos)
-    //     }, 1000)
-    // }) 
-
-    // useEffect(()=>{
-    //     getProducts.then( data=>{
-    //         setProductos(data)
-    //     })
-    // }, [productId])
-
-    async function getProducts(db) {
-        const productsCol = collection(db, 'ListadoDeProductos');
-        const productsSnapshot = await getDocs(productsCol);
-        const productsList = productsSnapshot.docs.map(doc => doc.data());
-        return setProductos(productsList);
+    async function getProduct(db) {
+        const docRef = doc(db, "ListadoDeProductos", productId);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+            console.log("Document data:", docSnap.data());
+            setProductos(docSnap.data())
+        }
     }
 
     useEffect(()=>{
-        getProducts(db)
-    },[])
-
-    const ProductId = parseInt(productId);
+      getProduct(db)
+    }, [])
 
     return(
         <div className="DetailsContainer">
            {Productos.map((producto)=>{
                     return (
-                        ProductId === producto.id 
-                        ? 
-                            <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} stock={producto.stock} link={`/categories/${producto.category}`} category={producto.category} id={producto.id} />
-                        : 
-                        null
+                        productId === parseInt(producto.id) ?
+                         <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} stock={producto.stock} link={`/categories/${producto.category}`} category={producto.category} id={producto.id} />
+                        : null
                     )
                 })}
             {Productos.length !== 0 ? null : <div className="CargandoProductos">Cargando productos...</div>}

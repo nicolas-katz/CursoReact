@@ -1,7 +1,6 @@
 import './ListProducts.css';
 import React, { useEffect, useState } from 'react'
 import Product from '../Product/Product';
-// import ListadoDeProductos from '../ListadoDeProductos/ListadoDeProductos'
 import { Link } from 'react-router-dom';
 import db from '../../firebase';
 import { collection, getDocs } from 'firebase/firestore';
@@ -9,21 +8,8 @@ import { collection, getDocs } from 'firebase/firestore';
 const ListProducts = ()=> {
     const [Productos, setProductos] = useState([]);
 
-    // const getProducts = new Promise( resolve=>{
-    //     setTimeout(()=>{
-    //         resolve(ListadoDeProductos)
-    //     }, 1000)
-    // }) 
-
-    // useEffect(()=>{
-        
-    //     getProducts.then( data=>{
-    //         setProductos(data)
-    //     })
-    // }, [])
-
     async function getProducts(db) {
-        const productsCol = collection(db, 'products');
+        const productsCol = collection(db, 'ListadoDeProductos');
         const productsSnapshot = await getDocs(productsCol);
         const productsList = productsSnapshot.docs.map(doc => doc.data());
         return setProductos(productsList);
@@ -44,7 +30,9 @@ const ListProducts = ()=> {
             <div className="CardsContainer">
                 {Productos.map((producto)=>{
                     return (
+                        producto.homePage === "Yes" ?
                         <Product key={producto.id} name={producto.name} price={producto.price}  link={`/products/${producto.id}`} />
+                        : null
                     )
                 })}
                 {Productos.length !== 0 ? null : <div color="Dark" className="CargandoProductos">Cargando productos...</div>}
