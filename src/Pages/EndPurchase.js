@@ -4,7 +4,9 @@ import {Link} from 'react-router-dom';
 import InfoProducts from '../components/InfoProducts/InfoProducts';
 import CartContext from '../Context/CartContext';
 import MP from '../assets/mercadopago.png';
-import {BsTag} from 'react-icons/bs'
+import {BsTag} from 'react-icons/bs';
+import db from '../firebase';
+import { collection, addDoc } from "firebase/firestore";
  
 const EndPurchase = ()=>{
 
@@ -39,6 +41,27 @@ const EndPurchase = ()=>{
         suma = cantProductos.reduce((acumulador, numero) => acumulador + numero);
     } else {
         suma = 0
+    }
+    
+    const newOrden = {
+        buyer: {
+            name: 'John Doe',
+            email: 'name@example.com',
+            phone: '1144444444'
+        },
+        products: products.map(product=>product.product),
+        total: total,
+        date: new Date
+    }
+
+    const pushOrdenToFirebase = async (newOrden)=>{
+        const orderFirebase = collection(db, 'orders');
+        const order = await addDoc(orderFirebase, newOrden);
+    }
+
+    const endBuy = ()=>{
+        pushOrdenToFirebase(newOrden);
+        clear();
     }
 
     return(
@@ -96,7 +119,7 @@ const EndPurchase = ()=>{
                                     <input type="checkbox" checked />
                                     <label>¿Desea inscribirse a nuestra cadena de emails?</label>
                                 </div>
-                                <Link to="/"><button onClick={clear}>REALIZAR COMPRA</button></Link>
+                                <Link to="/"><button onClick={endBuy}>REALIZAR COMPRA</button></Link>
                             </div>
                         </div>
                     </div>

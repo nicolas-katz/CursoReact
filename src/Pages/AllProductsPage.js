@@ -11,8 +11,12 @@ const AllProductsPage = ()=>{
     async function getProducts(db) {
         const productsCol = collection(db, 'ListadoDeProductos');
         const productsSnapshot = await getDocs(productsCol);
-        const productsList = productsSnapshot.docs.map(doc => doc.data());
-        return setProductos(productsList);
+        const productsList = productsSnapshot.docs.map(doc => {
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        });
+        return setProductos(productsList)
     }
 
     useEffect(()=>{

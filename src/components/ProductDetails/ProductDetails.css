@@ -181,7 +181,7 @@
     width: 190px;
 }
 
-.ProductsPagination a {
+.ProductsPagination span {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
@@ -194,12 +194,7 @@
     color: rgb(70, 70, 70);
 }
 
-.ProductsPagination .DisableLink,
-.ProductsPagination .DisableLink:hover {
-    color: grey;
-}
-
-.ProductsPagination a:hover {
+.ProductsPagination span:hover {
     color: rgb(70, 70, 70);
 }
 

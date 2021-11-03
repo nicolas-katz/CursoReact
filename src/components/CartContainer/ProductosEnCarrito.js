@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import CustomImage from "../CustomImage/CustomImage";
 import IMAGES from "../../assets/IMAGES";
 import { IoCloseCircleOutline } from 'react-icons/io5';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ItemCount from '../ProductDetails/ItemCount'
 import CartContext from "../../Context/CartContext";
 
@@ -11,6 +11,8 @@ const ProductosEnCarrito = (prop)=>{
     const arrImg = [
         IMAGES.img1,
     ]
+
+    const {productId} = useParams()
 
     const {addProduct, removeOneProduct} = useContext(CartContext)
 
@@ -25,7 +27,7 @@ const ProductosEnCarrito = (prop)=>{
     return(
         <div className="ProductoEnCarrito">
             <div className="Producto">
-                {arrImg && arrImg.map(image => <Link to={`/products/${prop.id}`}><CustomImage {...image} /></Link>)}
+                {arrImg && arrImg.map(image => <CustomImage {...image} />)}
                 <div className="ProductosDatos">
                     <h3>{prop.name}</h3>
                     <h4>${prop.price}</h4>

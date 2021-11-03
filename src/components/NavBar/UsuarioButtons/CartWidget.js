@@ -29,7 +29,7 @@ const CartWidget = ({show, close})=>{
                             return(
                                 <div className="ProductInCart">
                                     <div className="ProductDataContainer">
-                                        {arrImg && arrImg.map(image => <Link to={`/products/${product.product.id}`} onClick={handleCart}><CustomImage {...image} /></Link>)}
+                                        {arrImg && arrImg.map(image => <CustomImage {...image} />)}
                                         <div className="ProductData">
                                             <h3>{product.product.name}</h3>
                                             <h4>${product.product.price}</h4>

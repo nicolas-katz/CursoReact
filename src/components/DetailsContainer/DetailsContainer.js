@@ -14,7 +14,6 @@ const DetailsContainer = ()=>{
         const docRef = doc(db, "ListadoDeProductos", productId);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
-            console.log("Document data:", docSnap.data());
             setProductos(docSnap.data())
         }
     }
@@ -25,14 +24,7 @@ const DetailsContainer = ()=>{
 
     return(
         <div className="DetailsContainer">
-           {Productos.map((producto)=>{
-                    return (
-                        productId === parseInt(producto.id) ?
-                         <ProductDetails key={producto.id} name={producto.name} price={producto.price} image={producto.img} modal={producto.img} stock={producto.stock} link={`/categories/${producto.category}`} category={producto.category} id={producto.id} />
-                        : null
-                    )
-                })}
-            {Productos.length !== 0 ? null : <div className="CargandoProductos">Cargando productos...</div>}
+                         <ProductDetails key={Productos.id} name={Productos.name} price={Productos.price} image={Productos.img} modal={Productos.img} stock={Productos.stock} link={`/categories/${Productos.category}`} category={Productos.category} id={Productos.id} />
         </div>
     )
 

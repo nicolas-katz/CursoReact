@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './ProductDetails.css';
 import { FiMinus } from 'react-icons/fi'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { FaPinterestP, FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import ItemCount from './ItemCount'
 import CartContext from '../../Context/CartContext';
@@ -15,7 +15,9 @@ const ProductDetails = prop=> {
         document.querySelector(".DescripcionBody").classList.toggle("active");
     }
 
-    const {addProduct} = useContext(CartContext)
+    const {productId} = useParams()
+
+    const {addProduct, products} = useContext(CartContext)
     
     const arrImg = [
         IMAGES.img1,
@@ -31,8 +33,8 @@ const ProductDetails = prop=> {
         <div className="Contenedor">
             <div className="ProductsPagination">
                 <RiArrowLeftSLine className="ArrIcons" />
-                {id === 1 ? <Link className="DisableLink" to={`/products/${id}`}>Anterior</Link> : <Link to={`/products/${id - 1}`}>Anterior</Link>} |
-                {id === 46 ? <Link className="DisableLink" to={`/products/${id}`}>Siguiente</Link> : <Link to={`/products/${id + 1}`}>Siguiente</Link>}
+                <span>Anterior</span> |
+                <span>Siguiente</span>
                 <RiArrowRightSLine className="ArrIcons" />
             </div>
             <div className="DetalleDeProducto">
