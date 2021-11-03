@@ -57,6 +57,7 @@ const EndPurchase = ()=>{
     const pushOrdenToFirebase = async (newOrden)=>{
         const orderFirebase = collection(db, 'orders');
         const order = await addDoc(orderFirebase, newOrden);
+        console.log("ID de orden generada: ", order.id)
     }
 
     const endBuy = ()=>{

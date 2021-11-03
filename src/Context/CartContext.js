@@ -9,7 +9,7 @@ const CartProvider = ({children})=>{
     }
 
     //  Agrego productos al carrito
-    const [products , setProducts] = useState([])
+    const [products , setProducts] = useState(JSON.parse(localStorage.getItem('cartProducts')) || [])
 
     const addProduct = (product, count) => {
         let cartElement = {product, count}
@@ -23,6 +23,11 @@ const CartProvider = ({children})=>{
             cartAux = [cartElement, ...products]
         }
         setProducts(cartAux)
+        addProductInStorage()
+    }
+
+    const addProductInStorage = ()=>{
+      localStorage.setItem('cartProducts', JSON.stringify(products))
     }
 
     // Borro producto del carrito
@@ -31,6 +36,8 @@ const CartProvider = ({children})=>{
             const CartProducts = products.filter(element => element.product.name !== product.name) || []
             setProducts([...CartProducts])
         }
+        localStorage.clear()
+        addProductInStorage()
     }
 
     // Subtotal
@@ -85,6 +92,8 @@ const CartProvider = ({children})=>{
               return element
             })
             setProducts([...cart])
+            localStorage.clear()
+            addProductInStorage()
           }
         } 
     }
@@ -92,6 +101,7 @@ const CartProvider = ({children})=>{
     // Vaciar carrito
     const clear = ()=>{
       setProducts([])
+      localStorage.clear()
     }
 
     // Enviar context a la aplicación
