@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/CursoReact/static/css/main.cbfaa8b3.chunk.css",
+    "main.js": "/CursoReact/static/js/main.fb26b1ef.chunk.js",
+    "main.js.map": "/CursoReact/static/js/main.fb26b1ef.chunk.js.map",
+    "runtime-main.js": "/CursoReact/static/js/runtime-main.10f072c4.js",
+    "runtime-main.js.map": "/CursoReact/static/js/runtime-main.10f072c4.js.map",
+    "static/js/2.c871c442.chunk.js": "/CursoReact/static/js/2.c871c442.chunk.js",
+    "static/js/2.c871c442.chunk.js.map": "/CursoReact/static/js/2.c871c442.chunk.js.map",
+    "static/js/3.e912214f.chunk.js": "/CursoReact/static/js/3.e912214f.chunk.js",
+    "static/js/3.e912214f.chunk.js.map": "/CursoReact/static/js/3.e912214f.chunk.js.map",
+    "index.html": "/CursoReact/index.html",
+    "static/css/main.cbfaa8b3.chunk.css.map": "/CursoReact/static/css/main.cbfaa8b3.chunk.css.map",
+    "static/js/2.c871c442.chunk.js.LICENSE.txt": "/CursoReact/static/js/2.c871c442.chunk.js.LICENSE.txt",
+    "static/media/logo.436cea34.png": "/CursoReact/static/media/logo.436cea34.png",
+    "static/media/mercadopago.d3f51d66.png": "/CursoReact/static/media/mercadopago.d3f51d66.png",
+    "static/media/Main.css": "/CursoReact/static/media/portada3.5d6d631f.jpg",
+    "static/media/prueba.576d6912.webp": "/CursoReact/static/media/prueba.576d6912.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.10f072c4.js",
+    "static/js/2.c871c442.chunk.js",
+    "static/css/main.cbfaa8b3.chunk.css",
+    "static/js/main.fb26b1ef.chunk.js"
+  ]
+}
