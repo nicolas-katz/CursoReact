@@ -17,9 +17,10 @@ Librerias utilizadas:
 - React hooks
 - Firebase
 
-# DEMO del ecommerce: https://nicolas-katz.github.io/
+# DEMO del ecommerce: https://nicolas-katz.github.io/CursoReact/
 
-# Available Scripts. In the project directory, you can run:
+# Available Scripts. 
+In the project directory, you can run:
 
 npm start
 Runs the app in the development mode.
