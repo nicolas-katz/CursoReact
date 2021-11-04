@@ -19,6 +19,8 @@ Librerias utilizadas:
 
 # DEMO del ecommerce: https://nicolas-katz.github.io/CursoReact/
 
+# VIDEO GIF: 
+
 # Available Scripts. 
 In the project directory, you can run:
 
